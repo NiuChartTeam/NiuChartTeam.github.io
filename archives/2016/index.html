@@ -54,7 +54,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NiuChart-API">
-<meta property="og:url" content="http://linsmalldragon.github.io/index.html">
+<meta property="og:url" content="http://linsmalldragon.github.io/archives/2016/index.html">
 <meta property="og:site_name" content="NiuChart-API">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title> NiuChart-API </title>
+  <title> 归档 | NiuChart-API </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +92,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column  page-archive ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -158,170 +156,355 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-    
-    
+    <span class="archive-page-counter">
       
       
+      
         
-        
-        
+      
+      嗯..! 目前共计 15 篇日志。 继续努力。
+    </span>
+
+    
+
+      
+      
       
 
       
-    
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/NXCard_style/" itemprop="url">
-                  card类型不为NXCubeCard时chart的样式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-18T14:44:18+08:00" content="2016-01-18">
-              2016-01-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/NXCard_style/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="NXCard_style/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
-      </header>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/NXCard_style/" itemprop="url">
+              
+                <span itemprop="name">card类型不为NXCubeCard时chart的样式</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-18T14:44:18+08:00"
+              content="2016-01-18" >
+          01-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
     
 
-
-    <div class="post-body">
-
+      
       
       
 
       
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <span itemprop="articleBody">
-            
-              <p>普通card，即type不为”NXCubeCard”时，相关属性如下：  </p>
-<pre><code><span class="collection">{
-    <span class="string">"padding"</span>: <span class="collection">{
-        ...
-    }</span>,
-    <span class="string">"header"</span>: <span class="collection">{
-        ...
-    }</span>
-}</span>  
-</code></pre><h2 id="padding">padding</h2><p>卡片的内边距，具体属性见<a href="/general_style/#paddingStyle">paddingStyle</a>  </p>
-<h2 id="header">header</h2><p>pad端卡片在小卡片缩小状态时，顶部栏目的样式。相关属性如下：  </p>
-<pre><code><span class="string">"header"</span>: {
-    <span class="string">"height"</span>: <span class="number">0</span>,
-    <span class="string">"titleLabel"</span>: {
-        ...
-    },
-    <span class="string">"conditions"</span>: {
-        <span class="string">"borderVisible"</span>: true,
-        <span class="string">"height"</span>: <span class="number">0</span>,
-        <span class="string">"gap"</span>: <span class="number">10</span>,
-        <span class="string">"conditionColor"</span>: {
-            ...
-        },
-        <span class="string">"conditionRadius"</span>: [<span class="number">0</span>, <span class="number">0</span>],
-        <span class="string">"conditionSelectedColor"</span>: {
-            ...
-        },
-        <span class="string">"conditionLabel"</span>: {
-            ...
-        },
-        <span class="string">"dropDown"</span>: {
-            <span class="string">"width"</span>: <span class="number">150</span>,
-            <span class="string">"height"</span>: <span class="number">300</span>,
-            <span class="string">"backgroundColor"</span>: {
-                ...
-            },
-            <span class="string">"borderline"</span>: {
-                ...
-            },
-            <span class="string">"textLabel"</span>: {
-                ...
-            }
-        }
-    }
-}  
-</code></pre><p>“height”：head的高度。<br>“titleLabel”：文字标题样式。具体属性见<a href="/general_style/#textStyle">textStyle</a><br>“conditions”：头部条件选项的样式。  </p>
-<ul>
-<li>“borderVisible”：条件选项的边框是否可见。  </li>
-<li>“height”：条件选项框的高度。  </li>
-<li>“gap”：条件选项框的间隔。  </li>
-<li>“conditionColor”：条件选项框的底色。空时表示不用画，即透明的。具体属性见<a href="/general_style/#fillColor">fillColor</a>  </li>
-<li>“conditionRadius”：条件圆框半径。2个float值。  </li>
-<li>“conditionSelectedColor”：条件选项框选中的填充色。空时表示用page的主打色。具体属性见<a href="/general_style/#fillColor">fillColor</a>  </li>
-<li>“conditionLabel”：条件标题样式。具体属性见<a href="/general_style/#textStyle">textStyle</a>  </li>
-<li>“dropDown”：下拉框样式。  <ul>
-<li>“width”：下拉框的宽度。默认为150dp  </li>
-<li>“height”：下拉框的高度。默认为300dp  </li>
-<li>“backgroundColor”：下拉框的背景色。具体属性见<a href="/general_style/#fillColor">fillColor</a>  </li>
-<li>“borderline”：下拉框的边界线样式。具体属性见<a href="/general_style/#lineStyle">lineStyle</a>  </li>
-<li>“textLabel”：下拉框内文本标签的样式。具体属性见<a href="/general_style/#textStyle">textStyle</a></li>
-</ul>
-</li>
-</ul>
-
-            
-          </span>
+            <a class="post-title-link" href="/card/" itemprop="url">
+              
+                <span itemprop="name">card</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <footer class="post-footer">
-      
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-18T11:19:10+08:00"
+              content="2016-01-18" >
+          01-18
+        </time>
+      </div>
 
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/structure/" itemprop="url">
+              
+                <span itemprop="name">数据模型</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-17T15:16:14+08:00"
+              content="2016-01-17" >
+          01-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/series/" itemprop="url">
+              
+                <span itemprop="name">series</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-17T15:16:14+08:00"
+              content="2016-01-17" >
+          01-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/NXSuperList_type_chart/" itemprop="url">
+              
+                <span itemprop="name">chart类型为NXSuperList的样式</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-17T15:16:14+08:00"
+              content="2016-01-17" >
+          01-17
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/NXCubeCard_style/" itemprop="url">
+              
+                <span itemprop="name">card类型为NXCubeCard时chart样式总览</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-12T13:34:14+08:00"
+              content="2016-01-12" >
+          01-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/NXChart_type_concept/" itemprop="url">
+              
+                <span itemprop="name">chart类型为NXChart的样式</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-12T10:08:04+08:00"
+              content="2016-01-12" >
+          01-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/NiuChart-logo视觉规范/" itemprop="url">
+              
+                <span itemprop="name">NiuChart logo视觉规范</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-06T17:23:52+08:00"
+              content="2016-01-06" >
+          01-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/交互视觉说明/" itemprop="url">
+              
+                <span itemprop="name">交互视觉说明</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-01-05T14:25:44+08:00"
+              content="2016-01-05" >
+          01-05
+        </time>
+      </div>
+
+    </header>
+  </article>
+
 
 
     
@@ -329,9 +512,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
 
 
@@ -451,6 +631,12 @@
 
   
   
+  
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
+  
+
 
   
     
@@ -494,6 +680,12 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 

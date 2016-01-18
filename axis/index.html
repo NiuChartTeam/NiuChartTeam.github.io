@@ -1,0 +1,759 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="axis除了饼图、地图、环图、单值图，所有图表都有x、y坐标轴。下面是axis元素的简单概述：axis属性节点可以为空，使用通用模板。见axisOptions特定属性只需要覆盖options设置axis相应的属性值即可。例如沿用options的其他属性，但将其设置为不可见：  
+&quot;axis&quot;: [{
+    &quot;visible&quot;: true
+}]
+idid用来唯一标识axis。可选择项有：left、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="axis">
+<meta property="og:url" content="http://linsmalldragon.github.io/axis/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="axis除了饼图、地图、环图、单值图，所有图表都有x、y坐标轴。下面是axis元素的简单概述：axis属性节点可以为空，使用通用模板。见axisOptions特定属性只需要覆盖options设置axis相应的属性值即可。例如沿用options的其他属性，但将其设置为不可见：  
+&quot;axis&quot;: [{
+    &quot;visible&quot;: true
+}]
+idid用来唯一标识axis。可选择项有：left、">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/axis.png">
+<meta property="og:updated_time" content="2015-12-31T06:42:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="axis">
+<meta name="twitter:description" content="axis除了饼图、地图、环图、单值图，所有图表都有x、y坐标轴。下面是axis元素的简单概述：axis属性节点可以为空，使用通用模板。见axisOptions特定属性只需要覆盖options设置axis相应的属性值即可。例如沿用options的其他属性，但将其设置为不可见：  
+&quot;axis&quot;: [{
+    &quot;visible&quot;: true
+}]
+idid用来唯一标识axis。可选择项有：left、">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> axis | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                axis
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-31T10:53:44+08:00" content="2015-12-31">
+              2015-12-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/axis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="axis/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="axis"><a href="id:axis" target="_blank" rel="external">axis</a></h1><p>除了饼图、地图、环图、单值图，所有图表都有x、y坐标轴。下面是axis元素的简单概述：<br><img src="/img/axis.png" alt="axis"><br>axis属性节点可以为空，使用通用模板。见<a href="/NiuChart_quick_start/#axisOptions">axisOptions</a><br>特定属性只需要覆盖options设置axis相应的属性值即可。例如沿用options的其他属性，但将其设置为不可见：  </p>
+<pre><code><span class="string">"axis"</span>: [{
+    <span class="string">"visible"</span>: <span class="literal">true</span>
+}]
+</code></pre><h2 id="id"><a href="id:id" target="_blank" rel="external">id</a></h2><p>id用来唯一标识axis。可选择项有：left、top、right、bottom，分别表示左边的坐标轴、上边的坐标轴、右边的坐标轴、下边的坐标轴。  </p>
+<h2 id="axisType"><a href="id:axisType" target="_blank" rel="external">axisType</a></h2><p>坐标轴的类型，默认为数值类型。可选项有：”NXAxisTypeNumberic”数值坐标轴、”NXAxisTypeCategory”类别坐标轴、”NXAxisTypeDateTime”时间坐标轴。<br>如果axisType是NXAxisTypeNumberic或NXAxisTypeDateTime，可以在<a href="#label">label</a>中设置按某一格式显示。<br>如果axisType是NXAxisTypeCategory，可以自定义需要显示的label。见<a href="#categories">categories</a></p>
+<h2 id="axisLine"><a href="id:axisLine" target="_blank" rel="external">axisLine</a></h2><p>水平或垂直的坐标线，使得图表的数据更容易阅读。<br>相关属性可以为空，使用默认样式。<br>详情见<a href="/general_style/#lineStyle">lineStyle</a></p>
+<h2 id="axisTitle"><a href="id:axisTitle" target="_blank" rel="external">axisTitle</a></h2><p>坐标轴的标题，用来表示此坐标轴的业务含义。相关属性如下：  </p>
+<pre><code><span class="string">"axisTitle"</span>: {
+    <span class="string">"title"</span>: <span class="string">"title"</span>,
+    <span class="string">"titleVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"titleLocation"</span>: <span class="number">0.5</span>,
+    <span class="string">"titleOffset"</span>: <span class="number">3</span>,
+    <span class="string">"titleRotation"</span>: <span class="number">0</span>,
+    <span class="string">"titleTextStyle"</span>: {
+        ...
+    }
+}
+</code></pre><p>axisTitle默认没有、不可见。设置”titleVisible”可以改变axisTitle的显示状态；当”titleVisible”为true时，设置了”title”显示设置的值，否则自动设置为此坐标轴的业务含义。<br>“titleTextStyle”的属性，见<a href="/general_style/#textStyle">textStyle</a></p>
+<h2 id="point"><a href="id:point" target="_blank" rel="external">point</a></h2><p>标识坐标轴上的刻度点，有主刻度和次刻度之分。 主刻度为坐标轴上的测量单位；次刻度在主刻度之间，辅助图表数据的阅读。有三个属性来描述：tick、label、gridLine。下面分别介绍这三种属性：</p>
+<h3 id="tick">tick</h3><p>坐标轴上的刻度线，相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"tickVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"tickLength"</span>: <span class="number">0</span>,
+    <span class="string">"tickDirection"</span>: <span class="string">"NXSignNegative"</span>,
+    <span class="string">"tickLineStyle"</span>: <span class="collection">{
+        ...
+    }</span>
+}</span>
+</code></pre><p>tick默认是不可见的，设置”tickVisible”属性可以改变显示状态。<br><a href="id:tickDirection" target="_blank" rel="external">“tickDirection”</a>表示刻度线是在坐标轴线的上面还是下面，上面为”NXSignNegative”，下面为”NXSignPositive”，默认负方向。<br>“tickLineStyle”的属性，见<a href="/general_style/#lineStyle">lineStyle</a></p>
+<h3 id="label"><a href="id:label" target="_blank" rel="external">label</a></h3><p>坐标轴上的标签，用来标识刻度。相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"labelVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"labelNumberUnit"</span>: <span class="literal">true</span>,
+    <span class="string">"labelFormatter"</span>: <span class="string">"#"</span>,
+    <span class="string">"labelDirection"</span>: <span class="string">"NXSignPositive"</span>,
+    <span class="string">"labelOffset"</span>: <span class="number">3</span>,
+    <span class="string">"labelRotation"</span>: <span class="number">0</span>,
+    <span class="string">"labelRotationAnchor"</span>: <span class="string">"NXRotationAnchorCenter"</span>,
+    <span class="string">"labelAlign"</span>: <span class="string">"NXAlignmentCenter"</span>,
+    <span class="string">"textStyle"</span>: <span class="collection">{
+        ...
+    }</span>
+}</span>
+</code></pre><p>label默认是可见的，设置”labelVisible”属性可以改变显示状态。<br>“labelNumberUnit”和”labelFormatter”用来将数据格式化。”labelNumberUnit”表示是否使用数字单位，目前支持的有k、m；设置”labelFormatter”属性，即按照指定格式格式化标签。<br>“labelDirection”的含义同<a href="#tickDirection">“tickDirection”</a>，默认为正方向。<br>“labelOffset”表示label沿”labelDirection”方向的偏移量。<br>“labelRotationAnchor”表示label旋转的锚点。默认为”NXRotationAnchorCenter”，表示以标签中心为锚点进行旋转。<br>“labelRotation”表示label需要旋转的角度，使用角度制。</p>
+<h3 id="gridLine">gridLine</h3><p>刻度分割线，水平和垂直一起时呈格子状，有利于图表的阅读和理解。当图表是垂直时，默认Y轴的主刻度显示gridLine,当图表是水平时，默认X轴的主刻度显示gridLine。相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"gridLineVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"gridLineStyle"</span>: <span class="collection">{
+        ...
+    }</span>   
+}</span>
+</code></pre><p>设置”gridLineVisible”属性可以改变显示状态。<br>“gridLineStyle”的属性，见<a href="/general_style/#lineStyle">lineStyle</a></p>
+<h2 id="band"><a href="id:band" target="_blank" rel="external">band</a></h2><p>将数据突显的区域块，有利于特殊数据的阅读。相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"range"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"fill"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"borderLineStyle"</span>: <span class="collection">{
+        ...
+    }</span>
+}</span>
+</code></pre><p>“range”：配置区域块的范围。见<a href="/general_style/#range">range</a><br>“fill”：区域块的填充色。见<a href="/general_style/#fillColor">fillColor</a><br>“borderLineStyle”：区域块边界线的样式。见<a href="/general_style/#lineStyle">lineStyle</a><br>band区域块可以有多个，然而大部分情况只需要修改range改变区域块范围，fill和borderLineStyle都是相同的，为了避免重复操作，niuchart提出了<a href="#bandOptions">bandOptions</a>概念。  </p>
+<h2 id="bandOptions"><a href="id:bandOptions" target="_blank" rel="external">bandOptions</a></h2><p>bandOptions其实就是<a href="#band">band</a>的一套模板。在bandOptions中配置好band的通用属性，那么在band中只需要将与bandOptions中不同的属性再做个设值即可，避免了相同属性重复定义的麻烦。<br>下面是bandOptions相关属性介绍：  </p>
+<pre><code><span class="string">"bandOptions"</span>: {
+    <span class="string">"range"</span>: {
+        ...
+    },
+    <span class="string">"fill"</span>: {
+        ...
+    },
+    <span class="string">"borderLineStyle"</span>: {
+        ...
+    }
+}  
+</code></pre><p>如果band沿用bandOptions中的fill和borderLineStyle，那么只需要覆盖设置range：  </p>
+<pre><code><span class="string">"bands"</span>: [{
+    <span class="string">"range"</span>: {
+        <span class="string">"location"</span>: <span class="number">0</span>,
+        <span class="string">"length"</span>: <span class="number">0</span>
+    }
+}]
+</code></pre><h2 id="categories"><a href="id:categories" target="_blank" rel="external">categories</a></h2><p>如果<a href="#axisType">axisType</a>是NXAxisTypeCategory，那么可以自定义分类坐标的label。相关属性如下：  </p>
+<pre><code><span class="string">"categories"</span>: [<span class="string">"语文"</span>, <span class="string">"数学"</span>, <span class="string">"生物"</span>]
+</code></pre><h2 id="divisionPolicy"><a href="id:divisionPolicy" target="_blank" rel="external">divisionPolicy</a></h2><p>坐标轴分法策略。选择不同的策略，坐标轴就会在策略位置上显示tick和label，默认时为自动策略。可选项有：”NXAxisLabelingPolicyNone”用户自定义labels和tick的坐标位置、”NXAxisLabelingPolicyLocationsProvided”、”NXAxisLabelingPolicyFixedInterval”、”NXAxisLabelingPolicyAutomatic”自动排布、”NXAxisLabelingPolicyEqualDivisions”。相关属性如下： </p>
+<pre><code><span class="string">"divisionPolicy"</span>: {
+    <span class="string">"strategy"</span>: <span class="string">"NXAxisLabelingPolicyAutomatic"</span>,
+    <span class="string">"fixedInterval"</span>: {
+        ...
+    },
+    <span class="string">"equalDivision"</span>: {
+        ...
+    },
+    <span class="string">"providedLocations"</span>: {
+        ...
+    }
+}
+</code></pre><p>“strategy”：表示此坐标轴使用的划分策略。默认为自动策略，设置其他选项可以改变状态。<br>“fixedInterval”：NXAxisLabelingPolicyFixedInterval策略的相关属性，见<a href="#policyFixedInterval">NXAxisLabelingPolicyFixedInterval</a><br>“equalDivision”：NXAxisLabelingPolicyEqualDivisions策略的相关属性，见<a href="#policyEqualDivisions">NXAxisLabelingPolicyEqualDivisions</a><br>“providedLocations”：NXAxisLabelingPolicyLocationsProvided策略的相关属性，见<a href="#policyLocationsProvided">NXAxisLabelingPolicyLocationsProvided</a>  </p>
+<h3 id="NXAxisLabelingPolicyLocationsProvided"><a href="id:policyLocationsProvided" target="_blank" rel="external">NXAxisLabelingPolicyLocationsProvided</a></h3><p>此策略为用户自定义tick的坐标位置</p>
+<pre><code>  {
+    "<span class="attribute">majorPointLocations</span>": <span class="value">[<span class="number">0</span>, <span class="number">1</span>]</span>,
+    "<span class="attribute">minorPointLocations</span>": <span class="value">[<span class="number">0.5</span>]
+</span>}
+</code></pre><p>“majorPointLocations”：主刻度的坐标<br>“minorPointLocations”：次刻度的坐标</p>
+<h3 id="NXAxisLabelingPolicyFixedInterval"><a href="id:policyFixedInterval" target="_blank" rel="external">NXAxisLabelingPolicyFixedInterval</a></h3><p>此策略为固定长度（逻辑值）分法  </p>
+<pre><code>{
+    "<span class="attribute">majorIntervalLength</span>": <span class="value"><span class="number">0</span></span>,
+    "<span class="attribute">minorIntervalLength</span>": <span class="value"><span class="number">0</span></span>,
+    "<span class="attribute">fixedOrigin</span>": <span class="value"><span class="number">0</span>
+</span>}
+</code></pre><p>“majorIntervalLength”：主刻度间隔的长度<br>“minorIntervalLength”：次刻度间隔的长度<br>“fixedOrigin”：划分起始点</p>
+<h3 id="NXAxisLabelingPolicyEqualDivisions"><a href="id:policyEqualDivisions" target="_blank" rel="external">NXAxisLabelingPolicyEqualDivisions</a></h3><p>此策略为按个数等分法  </p>
+<pre><code>{
+    "<span class="attribute">majorPointNumber</span>": <span class="value"><span class="number">2</span></span>,
+    "<span class="attribute">minorPointNumber</span>": <span class="value"><span class="number">1</span>
+</span>}
+</code></pre><p>“majorPointNumber”：主刻度的个数<br>“minorPointNumber”：次刻度的个数</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/canvas/" rel="next" title="canvas">
+                <i class="fa fa-chevron-left"></i> canvas
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/touchTools/" rel="prev" title="touchTools">
+                touchTools <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="axis/"
+           data-title="axis" data-url="http://linsmalldragon.github.io/axis/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#axis"><span class="nav-number">1.</span> <span class="nav-text">axis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#id"><span class="nav-number">1.1.</span> <span class="nav-text">id</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axisType"><span class="nav-number">1.2.</span> <span class="nav-text">axisType</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axisLine"><span class="nav-number">1.3.</span> <span class="nav-text">axisLine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#axisTitle"><span class="nav-number">1.4.</span> <span class="nav-text">axisTitle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#point"><span class="nav-number">1.5.</span> <span class="nav-text">point</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tick"><span class="nav-number">1.5.1.</span> <span class="nav-text">tick</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#label"><span class="nav-number">1.5.2.</span> <span class="nav-text">label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gridLine"><span class="nav-number">1.5.3.</span> <span class="nav-text">gridLine</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#band"><span class="nav-number">1.6.</span> <span class="nav-text">band</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bandOptions"><span class="nav-number">1.7.</span> <span class="nav-text">bandOptions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#categories"><span class="nav-number">1.8.</span> <span class="nav-text">categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#divisionPolicy"><span class="nav-number">1.9.</span> <span class="nav-text">divisionPolicy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NXAxisLabelingPolicyLocationsProvided"><span class="nav-number">1.9.1.</span> <span class="nav-text">NXAxisLabelingPolicyLocationsProvided</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXAxisLabelingPolicyFixedInterval"><span class="nav-number">1.9.2.</span> <span class="nav-text">NXAxisLabelingPolicyFixedInterval</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXAxisLabelingPolicyEqualDivisions"><span class="nav-number">1.9.3.</span> <span class="nav-text">NXAxisLabelingPolicyEqualDivisions</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

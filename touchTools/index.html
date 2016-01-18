@@ -1,0 +1,740 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="touchTools手势交互的工具，NiuChart将图表上的各种手势交互都封装成了手势交互工具类。touchTool的种类有：”NXCursorTool“、”NXLineTool“、”NXPieSpinTool“、”NXChangeActiveSeriesTool“、”NXHighLightTool“、”NXZoomTool“、”NXNavigationTool“、”NXMapHighLight">
+<meta property="og:type" content="article">
+<meta property="og:title" content="touchTools">
+<meta property="og:url" content="http://linsmalldragon.github.io/touchTools/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="touchTools手势交互的工具，NiuChart将图表上的各种手势交互都封装成了手势交互工具类。touchTool的种类有：”NXCursorTool“、”NXLineTool“、”NXPieSpinTool“、”NXChangeActiveSeriesTool“、”NXHighLightTool“、”NXZoomTool“、”NXNavigationTool“、”NXMapHighLight">
+<meta property="og:updated_time" content="2015-12-31T03:20:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="touchTools">
+<meta name="twitter:description" content="touchTools手势交互的工具，NiuChart将图表上的各种手势交互都封装成了手势交互工具类。touchTool的种类有：”NXCursorTool“、”NXLineTool“、”NXPieSpinTool“、”NXChangeActiveSeriesTool“、”NXHighLightTool“、”NXZoomTool“、”NXNavigationTool“、”NXMapHighLight">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> touchTools | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                touchTools
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-31T10:55:50+08:00" content="2015-12-31">
+              2015-12-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/touchTools/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="touchTools/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="touchTools"><a href="id:touchTools" target="_blank" rel="external">touchTools</a></h1><p>手势交互的工具，NiuChart将图表上的各种手势交互都封装成了手势交互工具类。touchTool的种类有：”<a href="#NXCursorTool">NXCursorTool</a>“、”<a href="#NXLineTool">NXLineTool</a>“、”<a href="#NXPieSpinTool">NXPieSpinTool</a>“、”<a href="#NXChangeActiveSeriesTool">NXChangeActiveSeriesTool</a>“、”<a href="#NXHighLightTool">NXHighLightTool</a>“、”<a href="#NXZoomTool">NXZoomTool</a>“、”<a href="#NXNavigationTool">NXNavigationTool</a>“、”<a href="#NXMapHighLightTool">NXMapHighLightTool</a>“。相关属性如下：  </p>
+<pre><code><span class="string">"touchTools"</span>: [{
+    <span class="string">"targetSeries"</span>: [],
+    <span class="string">"crossAxis"</span>: <span class="string">""</span>,
+    <span class="string">"toolType"</span>: <span class="string">"NXCursorTool"</span>,
+    <span class="string">"active"</span>: <span class="string">""</span>
+}]
+</code></pre><p>“targetSeries”：需要设置此touchTool作用的series id。此属性为一个数组，可以将此touchTool作用于多个series。<br>“crossAxis”：与此touchTool相交的axis id。<br>“toolType”：表示此touchTool的种类。所有种类上文已说明。<br>“active”：表示是否激活此touchTool。<br>touchTool针对自己的种类都有一套模板，使得不用重复配置相同属性节点。touchTool想要配置特殊的属性值，只需要覆盖模板的相应属性。模板见<a href="/NiuChart_quick_start/#touchToolOptions">touchToolOptions</a></p>
+<h3 id="NXChartTool"><a href="id:chartTool" target="_blank" rel="external">NXChartTool</a></h3><p>所有touchTool的基类，相关属性如下：  </p>
+<pre><code>｛
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"active"</span>: <span class="literal">true</span>,
+    <span class="string">"showBelowSeries"</span>: <span class="literal">false</span>
+｝
+</code></pre><p>“visible”：表示手势交互是否出现，默认为出现，可以设置参数改变其交互。<br>“active”：表示此touchTool是否处于激活状态，默认为激活状态。非激活状态的<a href="#toolPlot">toolPlot</a>灰色显示，激活状态则高亮显示。<br>“showBelowSeries”：表示是否在series下面。多个图形绘制可能会有覆盖，设置此参数可以根据重要性<a href="#toolPlot">toolPlot</a>画在series下面或是上面。</p>
+<h3 id="NXMultiTouchChartTool"><a href="id:multiTouchChartTool" target="_blank" rel="external">NXMultiTouchChartTool</a></h3><p>多指交互工具，支持单指和双指的手势交互，相关属性如下：  </p>
+<pre><code>｛
+    <span class="comment">// NXChartTool属性</span>
+    <span class="attribute">...</span>
+    <span class="string">"enableMultiTouch"</span>: <span class="literal">true</span>,
+    <span class="string">"removeOnRelease"</span>: <span class="literal">true</span>,
+｝
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>的属性。<br>“enableMultiTouch”：多指触摸是否可用。默认为可用。<br>“removeOnRelease”：表示释放手指的时候，指示器<a href="#toolPlot">toolPlot</a>是否移除。  </p>
+<h3 id="NXCursorTool"><a href="id:cursorTool" target="_blank" rel="external">NXCursorTool</a></h3><p>指示器为十字架的多指交互工具，用于<a href="#bubbleSeries">泡泡图</a>的手势交互中。单指时突显选中的数据点，双指时将两个数据点进行对比分析。相关属性如下：  </p>
+<pre><code><span class="string">"NXCursorTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">//  NXMultiTouchChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXLineTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>、<a href="#multiTouchChartTool">NXMultiTouchChartTool</a>、<a href="#lineTool">NXLineTool</a>的属性。  </p>
+<h3 id="NXLineTool"><a href="id:lineTool" target="_blank" rel="external">NXLineTool</a></h3><p>指示器为线性的多指交互工具。单指时突显选中的数据点，双指时将两个数据点进行对比分析。相关属性如下：</p>
+<pre><code><span class="string">"NXLineTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+    <span class="comment">//  NXMultiTouchChartTool</span>
+    <span class="attribute">...</span>
+    <span class="string">"toolPlot"</span>: {
+        <span class="attribute">...</span>
+    }
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>和<a href="#multiTouchChartTool">NXMultiTouchChartTool</a>的属性。<br>“toolPlot”：见<a href="#toolPlot">toolPlot</a></p>
+<h3 id="NXPieSpinTool"><a href="id:pieSpinTool" target="_blank" rel="external">NXPieSpinTool</a></h3><p>用于<a href="#pieSeries">饼图</a>旋转的手势交互工具，相关属性如下：  </p>
+<pre><code><span class="string">"NXPieSpinTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    ...
+
+    <span class="string">"friction"</span>: <span class="number">0.95</span>,
+    <span class="string">"deceleration"</span>: <span class="number">860</span>,
+    <span class="string">"maxInertiaShakeCount"</span>: <span class="number">5</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>的属性。<br>“friction”：摩擦系数，默认是0.95<br>“deceleration”：加速度，默认是860°/s²<br>“maxInertiaShakeCount”：模仿惯性最大的震荡次数，默认是5次  </p>
+<h3 id="NXChangeActiveSeriesTool"><a href="id:changeActiveSeriesTool" target="_blank" rel="external">NXChangeActiveSeriesTool</a></h3><p>改变series激活状态的手势交互工具。该工具可双击切换series，使当前激活的高亮显示，未激活的暗黑显示。相关属性如下：  </p>
+<pre><code><span class="string">"NXChangeActiveSeriesTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>的属性。</p>
+<h3 id="NXHighLightTool"><a href="id:highLightTool" target="_blank" rel="external">NXHighLightTool</a></h3><p>有坐标轴图表的高亮显示工具。该工具使选中的数据点高亮显示。相关属性如下：  </p>
+<pre><code><span class="string">"NXHighLightTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">//  NXMultiTouchChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXLineTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>、<a href="#multiTouchChartTool">NXMultiTouchChartTool</a>、<a href="#lineTool">NXLineTool</a>的属性。</p>
+<h3 id="NXZoomTool"><a href="id:zoomTool" target="_blank" rel="external">NXZoomTool</a></h3><p>用于地图缩放的手势交互工具，相关属性如下：  </p>
+<pre><code><span class="string">"NXZoomTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>的属性。</p>
+<h3 id="NXNavigationTool"><a href="id:navigationTool" target="_blank" rel="external">NXNavigationTool</a></h3><p>作用在<a href="#navigation">navigation</a>上的手势交互工具。单击坐标轴，使得导航条与图表同步，并显示or消失，相关属性如下：  </p>
+<pre><code><span class="string">"NXNavigationTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>的属性。</p>
+<h3 id="NXMapHighLightTool"><a href="id:mapHighLightTool" target="_blank" rel="external">NXMapHighLightTool</a></h3><p>用于地图高亮显示的交互工具，相关属性如下：  </p>
+<pre><code><span class="string">"NXMapHighLightTool"</span>: {
+    <span class="comment">// NXChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">//  NXMultiTouchChartTool</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXLineTool</span>
+    <span class="attribute">...</span>
+}
+</code></pre><p>沿用父类<a href="#chartTool">NXChartTool</a>、<a href="#multiTouchChartTool">NXMultiTouchChartTool</a>、<a href="#lineTool">NXLineTool</a>的属性。</p>
+<h3 id="toolPlot"><a href="id:toolPlot" target="_blank" rel="external">toolPlot</a></h3><p>touchTool的可视化指示器。NiuChart将NXLineTool、NXCursorTool可视化，与手势同步移动，方便图表数据的分析。相关属性如下：  </p>
+<pre><code><span class="string">"toolPlot"</span>: {
+    <span class="string">"singleTouchLineType"</span>: <span class="string">"NXLineToolTypeVertical"</span>,
+    <span class="string">"multiTouchLineType"</span>: <span class="string">"NXLineToolTypeVertical"</span>,
+    <span class="string">"lineStyle"</span>: {
+        ...
+    },
+    <span class="string">"outerSymbol"</span>: {
+        ...
+    },
+    <span class="string">"innerSymbol"</span>: {
+        ...
+    }
+}
+</code></pre><p>“singleTouchLineType”：配置当单指触摸时，线性指示器的类型。可选项见<a href="#lineToolType">NXLineToolType</a><br>“multiTouchLineType”：配置当多指触摸时，线性指示器的类型。可选项见<a href="#lineToolType">NXLineToolType</a><br>“lineStyle”：指示器的线的样式，相关属性见<a href="/general_style/#lineStyle">lineStyle</a><br>“outerSymbol”：线性指示器上标记物外圈的样式，相关属性见<a href="/general_style/#symbol">symbol</a><br>“innerSymbol”：线性指示器上标记物内圈的样式，相关属性见<a href="/general_style/#symbol">symbol</a>  </p>
+<h3 id="NXLineToolType"><a href="id:lineToolType" target="_blank" rel="external">NXLineToolType</a></h3><p>线性指示器的类型。可选项有：NXLineToolTypeVertical垂直、NXLineToolTypeHorizontal水平、NXLineToolTypeCross十字架、NXLineToolTypeRect矩形</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/axis/" rel="next" title="axis">
+                <i class="fa fa-chevron-left"></i> axis
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/general_style/" rel="prev" title="general style">
+                general style <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="touchTools/"
+           data-title="touchTools" data-url="http://linsmalldragon.github.io/touchTools/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#touchTools"><span class="nav-number">1.</span> <span class="nav-text">touchTools</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NXChartTool"><span class="nav-number">1.0.1.</span> <span class="nav-text">NXChartTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXMultiTouchChartTool"><span class="nav-number">1.0.2.</span> <span class="nav-text">NXMultiTouchChartTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXCursorTool"><span class="nav-number">1.0.3.</span> <span class="nav-text">NXCursorTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXLineTool"><span class="nav-number">1.0.4.</span> <span class="nav-text">NXLineTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXPieSpinTool"><span class="nav-number">1.0.5.</span> <span class="nav-text">NXPieSpinTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXChangeActiveSeriesTool"><span class="nav-number">1.0.6.</span> <span class="nav-text">NXChangeActiveSeriesTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXHighLightTool"><span class="nav-number">1.0.7.</span> <span class="nav-text">NXHighLightTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXZoomTool"><span class="nav-number">1.0.8.</span> <span class="nav-text">NXZoomTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXNavigationTool"><span class="nav-number">1.0.9.</span> <span class="nav-text">NXNavigationTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXMapHighLightTool"><span class="nav-number">1.0.10.</span> <span class="nav-text">NXMapHighLightTool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toolPlot"><span class="nav-number">1.0.11.</span> <span class="nav-text">toolPlot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NXLineToolType"><span class="nav-number">1.0.12.</span> <span class="nav-text">NXLineToolType</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

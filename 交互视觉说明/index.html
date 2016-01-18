@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="特点产品界面以扁平化风格呈现；视觉扁平、信息层级扁平。所见即所得，降低使用者学习成本。
+样式
+颜色软件主色调与NiuChart品牌配色保持一致^主色c用于软件全局操作性质的高亮状态；c1、c2分布用于背景色和边线色；c3、c4分布用于次要文字色和主要文字色；^此图为区间划分配色；区间划分既可表示数值段的划分（比如预期实际的对比图）；也可表示警戒区域的划分（比如仪表盘）^上图为图表内数据可视化配色，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交互视觉说明">
+<meta property="og:url" content="http://linsmalldragon.github.io/交互视觉说明/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="特点产品界面以扁平化风格呈现；视觉扁平、信息层级扁平。所见即所得，降低使用者学习成本。
+样式
+颜色软件主色调与NiuChart品牌配色保持一致^主色c用于软件全局操作性质的高亮状态；c1、c2分布用于背景色和边线色；c3、c4分布用于次要文字色和主要文字色；^此图为区间划分配色；区间划分既可表示数值段的划分（比如预期实际的对比图）；也可表示警戒区域的划分（比如仪表盘）^上图为图表内数据可视化配色，">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_color.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_color2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_color3.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_frot.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_loading1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_page1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_page2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_login.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_falls.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_extend.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/card.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_chart.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_2fingers.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_2layout.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_data1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_data2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_data3.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_choose1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_choose2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_choose3.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_choose4.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_drill1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_drill2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_filter1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_filter2.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_navigation.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/ph_menu_navigation_series.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_uikit.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_loading1.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/n_loading2.png">
+<meta property="og:updated_time" content="2016-01-18T02:40:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交互视觉说明">
+<meta name="twitter:description" content="特点产品界面以扁平化风格呈现；视觉扁平、信息层级扁平。所见即所得，降低使用者学习成本。
+样式
+颜色软件主色调与NiuChart品牌配色保持一致^主色c用于软件全局操作性质的高亮状态；c1、c2分布用于背景色和边线色；c3、c4分布用于次要文字色和主要文字色；^此图为区间划分配色；区间划分既可表示数值段的划分（比如预期实际的对比图）；也可表示警戒区域的划分（比如仪表盘）^上图为图表内数据可视化配色，">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 交互视觉说明 | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                交互视觉说明
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-05T14:25:44+08:00" content="2016-01-05">
+              2016-01-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/交互视觉说明/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="交互视觉说明/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h4 id="特点">特点</h4><p>产品界面以扁平化风格呈现；<br>视觉扁平、信息层级扁平。所见即所得，降低使用者学习成本。</p>
+<h4 id="样式">样式</h4><ul>
+<li><p><strong>颜色</strong><br>软件主色调与NiuChart品牌配色保持一致<br><img src="/img/n_color.png" alt="n\_color">^主色c用于软件全局操作性质的高亮状态；<br>c1、c2分布用于背景色和边线色；<br>c3、c4分布用于次要文字色和主要文字色；<br><img src="/img/n_color2.png" alt="n\_color2">^此图为区间划分配色；区间划分既可表示数值段的划分（比如预期实际的对比图）；也可表示警戒区域的划分（比如仪表盘）<br><img src="/img/n_color3.png" alt="n\_color2">^上图为图表内数据可视化配色，运用在各种图表里，不出现在软件全局配色下；<br>选中蒙板：即用户交互时，图表的选中状态；<br>未选：即当图表内有多系列纬度时，未被选中的系列的透明度降为20%，选中的系列颜色不变，保持原色；</p>
+</li>
+<li><p><strong>字体</strong><br><img src="/img/n_frot.png" alt="n\_frot">^软件字体分为中文和英文，中文为设备预设字体，英文为Google字体<a href="https://www.google.com/fonts/specimen/Poppins" target="_blank" rel="external">Poppins</a>；<br>这里还标出了Medium和Regular格式，前者主要用在标题上，后者则用于除标题外的所以环境下；</p>
+</li>
+</ul>
+<h4 id="布局（软件基本分页）">布局（软件基本分页）</h4><ul>
+<li><p><strong>启动页、加载页</strong><br>启动页与加载页效果一致，只以短时间出现；对于图表内的加载请查看”组件-加载”<br><img src="/img/n_loading1.png" alt="n\_loading1">^启动页简单logo加单色背景</p>
+</li>
+<li><p><strong>示例page页</strong><br><img src="/img/ph_page1.png" alt="ph\_page1">^左为用户未登录企业号默认示例页（首页），右为用户登录后的示例页（登录按左上方头像）；界面上方放用户企业服务器示例列表，下方放NiuChart示例<br><img src="/img/ph_page2.png" alt="ph\_page2">^示例列表页</p>
+</li>
+<li><p><strong>登录页</strong><br><img src="/img/ph_login.png" alt="ph\_login">^用户登录或退出页面</p>
+</li>
+<li><p><strong>瀑布流页</strong><br><img src="/img/ph_falls.png" alt="ph\_falls">^<br>1、示例标题；<br>2、当前页面所有card<strong>共有</strong>的条件纬度；<br>3、功能菜单按钮；<br>4、card（卡片）；</p>
+</li>
+<li><p><strong>放大页</strong><br><img src="/img/ph_extend.png" alt="ph\_extend">^<br>1、card标题；<br>2、card条件纬度；<br>3、交互数据信息呈现区（具体排布方式请查看”组件-数据信息呈现”）；</p>
+</li>
+<li><p><strong>功能菜单页</strong><br>只存在于phone端，pad端以侧边弹出框的形式出现，具体请查阅”组件-弹出框”<br><img src="/img/ph_menu.png" alt="ph\_menu">^<br>1、操作执行按钮；<br>2、功能菜单导航；<br>3、菜单下内容操作区；</p>
+</li>
+</ul>
+<h4 id="组件">组件</h4><ul>
+<li><p><strong>card（卡片）</strong><br>下图为瀑布流页card的一般样式（左为pad端样式，右为phone端样式）；大致由标题、条件纬度、数据信息、图表组成； <img src="/img/card.png" alt="card"><br>涉及图表<br><img src="/img/ph_chart.png" alt="ph\_chart"><br>单、双指交互<br>有些图表支持双指操作，查看对比信息；像有时间轴的图表：<br><img src="/img/ph_2fingers.png" alt="ph\_2fingers"><br>多排布方式<br>像地图、圆饼支持多种排布方式，以方便交互：<br><img src="/img/ph_2layout.png" alt="ph\_2layout"><br>数据信息呈现方式<br>1、根据图表自身特点,像气泡图属于四维图表，信息量比较大<br><img src="/img/ph_data1.png" alt="ph\_data1"><br>2、根据瀑布流页和放大页的区分，适当调整数据信息显示位置<br><img src="/img/ph_data2.png" alt="ph\_data2"><br><img src="/img/ph_data3.png" alt="ph\_data3"></p>
+</li>
+<li><p><strong>功能菜单</strong><br>功能菜单由于尺寸原因会有phone端和pad端两种形式，根据软件布局还有瀑布流页和放大页的形式。<br>主要功能-条件选择<br><img src="/img/ph_menu_choose1.png" alt="ph\_menu\_choose1">^phone瀑布流页里的条件选择功能<br><img src="/img/ph_menu_choose2.png" alt="ph\_menu\_choose2">^pad瀑布流里的条件选择功能<br><img src="/img/ph_menu_choose3.png" alt="ph\_menu\_choose3">^phone放大页里的条件选择功能<br><img src="/img/ph_menu_choose4.png" alt="ph\_menu\_choose4">^pad放大页里的条件选择功能<br>主要功能-钻取<br>对可视力度进行层级钻取<br><img src="/img/ph_menu_drill1.png" alt="ph\_menu\_drill1">^phone瀑布流页钻取（左边为呼出钻取功能入口）<br><img src="/img/ph_menu_drill2.png" alt="ph\_menu\_drill2">^pad瀑布流页钻取（以侧边栏的形式由右向左挤出）<br>钻取功能不分瀑布流和放大页，效果一致<br>主要功能-筛选<br>针对当前图表可视力度进行筛选操作<br><img src="/img/ph_menu_filter1.png" alt="ph\_menu\_filter1">^phone瀑布流页筛选（左边为呼出钻取功能入口）<br><img src="/img/ph_menu_filter2.png" alt="ph\_menu\_filter2">^pad瀑布流页筛选（以侧边栏的形式由右向左挤出）<br>筛选功能不分瀑布流和放大页，效果一致<br>辅助功能-时间轴导航<br>导航条能直观控制图表内的数据点数，方便用户查看整体数据或细节数据<br><img src="/img/ph_menu_navigation.png" alt="ph\_menu\_navigation">^时间轴导航常态隐藏与x轴里，需要时需促发x轴上的内容，才可唤出<br>辅助功能-多系列筛选<br>多系列筛选功能主要针对案例内同时对比多个系列对象所设置的功能，方便用户筛选查看<br><img src="/img/ph_menu_navigation_series.png" alt="ph\_menu\_navigation\_series"></p>
+</li>
+<li><strong>UI kit</strong><br>软件界面本身控键比较少，所以UI kit集合phone端和pad端的所有控件；其中包括按钮（文字按钮、图标按钮）、下拉菜单、弹出框等<br><img src="/img/n_uikit.png" alt="n\_uikit"></li>
+<li><strong>加载</strong><br>加载即页面数据出现前画面呈现的内容，排除用户等待的焦虑心情<br>页面加载，与启动效果一致，一般出现在进入瀑布流页前那瞬间<br><img src="/img/n_loading1.png" alt="n\_loading1"><br>图表内数据加载，即用户在等待瀑布流或放大页卡片数据图表加载时画面呈现的内容<br><img src="/img/n_loading2.png" alt="n\_loading2"></li>
+</ul>
+<h4 id="另注">另注</h4><ul>
+<li><strong>文字说明</strong><br>中文字体即为具体设备预设字体</li>
+<li><strong>尺寸标注说明</strong><br>此说明文档phone端、pad端效果图皆以@1x（mdpi）格式标注</li>
+<li><strong>横竖屏说明</strong></li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/general_style/" rel="next" title="general style">
+                <i class="fa fa-chevron-left"></i> general style
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/NiuChart-logo视觉规范/" rel="prev" title="NiuChart logo视觉规范">
+                NiuChart logo视觉规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="交互视觉说明/"
+           data-title="交互视觉说明" data-url="http://linsmalldragon.github.io/交互视觉说明/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#特点"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样式"><span class="nav-number">2.</span> <span class="nav-text">样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布局（软件基本分页）"><span class="nav-number">3.</span> <span class="nav-text">布局（软件基本分页）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件"><span class="nav-number">4.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#另注"><span class="nav-number">5.</span> <span class="nav-text">另注</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="NiuChart Android SDK 快速入门本文讲述的是如何进行快速入门，下面是相关步骤。  
+系统要求适用于Android3.0及以上平台  
+安装下载NiuChart的SDK和Demo都可以通过官网下载得到
+使用
+解压下载得到的压缩包，进入相应的目录查看所有包含文件，NiuChart提供的文件目录如下图所示：目录结构说明：Demo：样例工程源代码libs：包含有aar文件的库report">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NiuChart Android SDK 快速入门">
+<meta property="og:url" content="http://linsmalldragon.github.io/NiuChart_quick_start/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="NiuChart Android SDK 快速入门本文讲述的是如何进行快速入门，下面是相关步骤。  
+系统要求适用于Android3.0及以上平台  
+安装下载NiuChart的SDK和Demo都可以通过官网下载得到
+使用
+解压下载得到的压缩包，进入相应的目录查看所有包含文件，NiuChart提供的文件目录如下图所示：目录结构说明：Demo：样例工程源代码libs：包含有aar文件的库report">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/niuchart.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/quickStart.png">
+<meta property="og:updated_time" content="2016-01-04T06:38:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NiuChart Android SDK 快速入门">
+<meta name="twitter:description" content="NiuChart Android SDK 快速入门本文讲述的是如何进行快速入门，下面是相关步骤。  
+系统要求适用于Android3.0及以上平台  
+安装下载NiuChart的SDK和Demo都可以通过官网下载得到
+使用
+解压下载得到的压缩包，进入相应的目录查看所有包含文件，NiuChart提供的文件目录如下图所示：目录结构说明：Demo：样例工程源代码libs：包含有aar文件的库report">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> NiuChart Android SDK 快速入门 | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                NiuChart Android SDK 快速入门
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-22T19:56:00+08:00" content="2015-12-22">
+              2015-12-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NiuChart_quick_start/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NiuChart_quick_start/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="NiuChart_Android_SDK_快速入门">NiuChart Android SDK 快速入门</h1><p>本文讲述的是如何进行快速入门，下面是相关步骤。  </p>
+<h3 id="系统要求">系统要求</h3><p>适用于Android3.0及以上平台  </p>
+<h3 id="安装">安装</h3><h4 id="下载">下载</h4><p>NiuChart的SDK和Demo都可以通过<a href="http://www.niuchart.com/" target="_blank" rel="external">官网</a>下载得到</p>
+<h4 id="使用">使用</h4><ul>
+<li>解压下载得到的压缩包，进入相应的目录查看所有包含文件，NiuChart提供的文件目录如下图所示：<br><img src="/img/niuchart.png" alt="niuchart"><br>目录结构说明：<br>Demo：样例工程源代码<br>libs：包含有aar文件的库<br>report：包含有json和sqlite文件的文件夹  </li>
+<li>导入运行<code>Demo工程</code>  <ul>
+<li>将解压得到的Demo工程导入到你的AndroidStudio中<br>运行AndroidStudio –&gt; 点击Quick Start中的<code>Open an existing Android Studio project</code> –&gt; 然后选中解压得到的Demo工程等待即可<br><img src="/img/quickStart.png" alt="quickStart"></li>
+<li>运行Demo，在phone端或pad端观看效果。(支持Android3.0及以上平台) </li>
+</ul>
+</li>
+<li>将NiuChart SDK 集成到你的项目  <ul>
+<li>将libs目录下的aar文件复制到应用工程的libs目录下</li>
+<li>将report整个文件夹复制到应用程序的assets目录下，将自己的json和sqlite文件复制替换已有的json和report文件。</li>
+</ul>
+</li>
+</ul>
+<h4 id="使用入门">使用入门</h4><p>现在你可以浏览<a href="#firstApp">HelloWorld图表</a>上手使用NiuChart。  </p>
+<h3 id="HelloWorld图表"><a href="id:firstApp" target="_blank" rel="external">HelloWorld图表</a></h3><p>NiuChart SDK 已经包含在你的程序中了，现在你可以创建自己的第一个图表。<br>我们由创建一个简单的线性图开始  </p>
+<h4 id="1-_将数据库sqlite文件存放于/assets/report/目录下">1. 将数据库sqlite文件存放于/assets/report/目录下</h4><p>可以使用Demo中的数据库(sqlite文件)；或者创建一个符合NiuChart规则的数据库，这个后面会讲到  </p>
+<h4 id="2-_将json配置文件存放于/assets/report/目录下">2. 将json配置文件存放于/assets/report/目录下</h4><p>可以使用Demo中的json文件；或者创建一个符合NiuChart配置格式的json文件，这个后面会讲到</p>
+<h4 id="3-_设置为线性图">3. 设置为线性图</h4><p>将json配置文件中|–reports |–pages |–cards |–style |–chart |–chartConfig |–series节点下的<code>type</code>属性设值为<code>NXLineSeries</code>  </p>
+<pre><code><span class="collection">{
+    ...
+    <span class="string">"reports"</span>: <span class="collection">[<span class="collection">{
+        ...
+        <span class="string">"pages"</span>: <span class="collection">[<span class="collection">{
+            ...
+            <span class="string">"cards"</span>: <span class="collection">[<span class="collection">{
+                ...
+                <span class="string">"style"</span>: <span class="collection">{
+                    ...
+                    <span class="string">"chart"</span>: <span class="collection">{
+                        ...
+                        <span class="string">"chartConfig"</span>: <span class="collection">{
+                            ...
+                            <span class="string">"series"</span>: <span class="collection">[<span class="collection">{
+                                ...
+                                   <span class="string">"type"</span>: <span class="string">"NXLineSeries"</span>,
+                                   ...
+                            }</span>]</span>
+                        }</span>
+                    }</span>
+                }</span>
+            }</span>]</span>
+        }</span>]</span>
+    }</span>]</span>
+}</span>
+</code></pre><p>当然你还可以设置为其他图表。例如：散点图(NXScatterSeries)、面积图(NXAreaSeries)、柱形图(NXBarSeries)、梯形图(NXStepLineSeries)、地图(NXMapSeries)、饼图(NXPieSeries)、泡泡图(NXBubbleSeries)、单值图(NXSingleSeries)、环图(NXRingSeries)。只需要将<code>type</code>设值成相应的图表类型即可。</p>
+<h4 id="4-_你可以选择一个全局的主题应用到你的图表。">4. 你可以选择一个全局的主题应用到你的图表。</h4><p>NiuChart中的大部分属性都是通过配置json文件来完成的，然而很多相同类的不同对象都具有共同的属性，只需要改变某几个属性值。NiuChart为了避免这种多余的、重复设置属性的行为，提出了options也就是模板的概念。用户只需要覆盖设置与模板不同的属性值。<br>有关Options在NiuChart中是如何工作的更多细节，请看<a href="#setOptions">如何设置Options</a></p>
+<h3 id="如何设置chartOptions"><a href="id:setChartOptions" target="_blank" rel="external">如何设置chartOptions</a></h3><p>NiuChart使用chartOptions来定义全局的默认样式，定义了axis、canvs、series、touchTool这四种默认样式。所以这四种样式都可以为空，默认使用chartOptions中相应的样式；如果四种样式不为空，则会覆盖chartOptions中相应的样式。当然你可以为chartOptions定义作用域，见defaultStyle.scopeId、defaultStyle.scopeType</p>
+<h4 id="axisOptions"><a href="id:axisOptions" target="_blank" rel="external">axisOptions</a></h4><p>axisOptions其实就是<a href="/axis/#axis">axis</a>的一套模板。在axisOptions中配置好axis的通用属性，那么在axis中只需要将与axisOptions中不同的属性再做个设值即可，避免了相同属性重复定义的麻烦。<br>下面是axisOptions相关属性的介绍：  </p>
+<pre><code><span class="string">"axisOptions"</span>: {
+    <span class="string">"visible"</span>: <span class="atom">true</span>,
+    <span class="string">"coordinate"</span>: <span class="string">"NXCoordinateX"</span>,
+    <span class="string">"relativeOffset"</span>: <span class="number">0</span>,
+    <span class="string">"axisType"</span>: <span class="string">"NXAxisTypeNumberic"</span>,
+    <span class="string">"axisMinPaddingForPlot"</span>: <span class="number">0</span>,
+    <span class="string">"axisMaxPaddingForPlot"</span>: <span class="number">0</span>,
+    <span class="string">"divisionPolicy"</span>: {
+        ...
+    },
+    <span class="string">"referenceValue"</span>: <span class="number">0</span>,
+    <span class="string">"minValue"</span>: <span class="number">0</span>,
+    <span class="string">"maxValue"</span>: <span class="number">0</span>,
+    <span class="string">"scaleType"</span>: <span class="string">"NXScaleTypeLinear"</span>,
+    <span class="string">"inverted"</span>: <span class="atom">false</span>,
+    <span class="string">"crossingValue"</span>: <span class="number">0</span>,
+    <span class="string">"axisLineMinSymbol"</span>: {
+        ...
+    },
+    <span class="string">"axisLineMaxSymbol"</span>: {
+        ...
+    },
+    <span class="string">"axisLineStyle"</span>: {
+        ...
+    },
+    <span class="string">"axisTitle"</span>: {
+        ...
+    },
+    <span class="string">"majorPoint"</span>: {
+        ...
+    },
+    <span class="string">"minorPoint"</span>: {
+        ...
+    },
+    <span class="string">"bandOptions"</span>: {
+        ...
+    },
+    <span class="string">"id"</span>: <span class="string">"left"</span>,
+    <span class="string">"bands"</span>: [{
+        ...
+    }],
+    <span class="string">"categories"</span>: [<span class="string">""</span>, <span class="string">""</span>, <span class="string">""</span>],
+    <span class="string">"axisPointExclusionRange"</span>: [{
+        ...
+    }]
+}
+</code></pre><p>“visible”：axis除了饼图、地图、环图、单值图默认是不可见，其他图表都是默认可见的。可以设置”visible”属性更改axis显示状态。<br>“coordinate”：标识此axis是x坐标轴还是y坐标轴。默认是X轴。可选项有：NXCoordinateX、NXCoordinateY、NXCoordinateZ。<br>“relativeOffset”：表示axis在自身范围内的相对偏移量。默认为0，范围[0,1]。<br>“axisType”：见<a href="/axis/#axisType">axisType</a><br>“axisMinPaddingForPlot”：坐标的最小minPadding,默认为Float.NaN,表示不加padding,范围0-1<br>“axisMaxPaddingForPlot”：坐标的最大maxPadding,默认为Float.NaN,表示不加padding,范围0-1<br>“divisionPolicy”：见<a href="/axis/#divisionPolicy">divisionPolicy</a><br>“referenceValue”：基座引用值，用于叠加效果的barseries,areaseries,默认无叠加：Float.NaN<br>“minValue”：坐标最小值设定，默认不设：Double.NaN<br>“maxValue”：坐标最大设定，默认不设：Double.NaN<br>“scaleType”：坐标轴的缩放类型，默认为线性坐标。可选项有：”NXScaleTypeLinear”线性坐标缩放、”NXScaleTypeLog”对数坐标缩放。<br>“inverted”：坐标是否逆转，默认不逆转。<br>“crossingValue”：坐标轴相交点，默认在原点0相交。<br>“axisLineMinSymbol”：坐标轴最小值方向的标记，相关属性见<a href="/general_style/#symbol">symbol</a><br>“axisLineMaxSymbol”：坐标轴最大值方向的标记，相关属性见<a href="/general_style/#symbol">symbol</a><br>“axisLineStyle”：见<a href="/general_style/#axisLine">axisLine</a><br>“axisTitle”：见<a href="/general_style/#axisTitle">axisTitle</a><br>“majorPoint”：主刻度点，相关属性见<a href="/axis/#point">point</a><br>“minorPoint”：次刻度点，相关属性见<a href="/axis/#point">point</a><br>“bandOptions”：区域块模板，相关属性见<a href="/axis/#bandOptions">bandOptions</a><br>“bands”：区域块，相关属性见<a href="/axis/#band">band</a><br>“id”：见<a href="/axis/#id">id</a><br>“categories”：见<a href="/axis/#categories">categories</a><br>“axisPointExclusionRange”：坐标轴上排除的范围，相关属性见<a href="/general_style/#range">range</a>  </p>
+<h4 id="canvasOptions"><a href="id:canvasOptions" target="_blank" rel="external">canvasOptions</a></h4><p>canvasOptions其实就是<a href="/canvas/#canvas">canvas</a>的一套模板。在canvasOptions中配置好canvas的通用属性，那么在canvas中只需要将与canvasOptions中不同的属性再做个设值即可，避免了相同属性重复定义的麻烦。<br>下面是canvasOptions相关属性的介绍：  </p>
+<pre><code><span class="string">"canvasOptions"</span>: {
+    <span class="string">"graphBackgroundFill"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">1</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"graphBorderStyle"</span>: {
+        <span class="string">"lineWidth"</span>: <span class="number">1</span>,
+        <span class="string">"lineColor"</span>: <span class="string">"#000000"</span>,
+        <span class="string">"lineAlpha"</span>: <span class="number">1</span>,
+        <span class="string">"lineCap"</span>: <span class="string">"BUTT"</span>,
+        <span class="string">"lineJoin"</span>: <span class="string">"MITER"</span>,
+        <span class="string">"dashStyle"</span>: {
+            <span class="string">"intervals"</span>: [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],
+            <span class="string">"phase"</span>: <span class="number">0</span>
+        }
+    },
+    <span class="string">"plotBackgroundFill"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">1</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"plotBorderStyle"</span>: {
+        <span class="string">"lineWidth"</span>: <span class="number">1</span>,
+        <span class="string">"lineColor"</span>: <span class="string">"#000000"</span>,
+        <span class="string">"lineAlpha"</span>: <span class="number">1</span>,
+        <span class="string">"lineCap"</span>: <span class="string">"BUTT"</span>,
+        <span class="string">"lineJoin"</span>: <span class="string">"MITER"</span>,
+        <span class="string">"dashStyle"</span>: {
+            <span class="string">"intervals"</span>: [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],
+            <span class="string">"phase"</span>: <span class="number">0</span>
+        }
+    },
+    <span class="string">"chartPadding"</span>: {
+        <span class="string">"left"</span>: <span class="number">0</span>,
+        <span class="string">"top"</span>: <span class="number">0</span>,
+        <span class="string">"right"</span>: <span class="number">0</span>,
+        <span class="string">"bottom"</span>: <span class="number">0</span>
+    },
+    <span class="string">"graphPadding"</span>: {
+        <span class="string">"left"</span>: <span class="number">0</span>,
+        <span class="string">"top"</span>: <span class="number">0</span>,
+        <span class="string">"right"</span>: <span class="number">0</span>,
+        <span class="string">"bottom"</span>: <span class="number">0</span>
+    }
+}  
+</code></pre><p>chartOptions中各部分的含义请见<a href="/canvas/#canvas">canvas</a></p>
+<h4 id="seriesOptions"><a href="id:seriesOptions" target="_blank" rel="external">seriesOptions</a></h4><p>seriesOptions其实就是<a href="/series/#series">series</a>的一套模板。seriesOptions中配置好各种类型series的通用属性，那么在series中只需要将seriesOptions中指定<a href="/series/#type">type</a>的不同属性再做个设值即可，避免了相同属性重复定义的麻烦。<br>下面是seriesOptions相关属性的介绍：  </p>
+<pre><code><span class="string">"seriesOptions"</span>: {
+    <span class="string">"defaultSeriesType"</span>: <span class="string">"NXLineSeries"</span>,
+    <span class="string">"NXScatterSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXLineSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXAreaSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXBarSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXStepLineSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXMapSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXPieSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXBubbleSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXRingSeries"</span>: {
+        ...
+    },
+    <span class="string">"NXSingleSeries"</span>: {
+        ...
+    }
+}
+</code></pre><p>“defaultSeriesType”：默认的series类型。如果在<a href="/series/#series">series</a>中没有设置<a href="/series/#type">type</a>属性值，那么默认的series type就是defaultSeriesType设置的属性值。<br>其他属性都是相应类型的series的模板，具体属性说明见<a href="/series/#series">series</a></p>
+<h4 id="touchToolOptions"><a href="id:touchToolOptions" target="_blank" rel="external">touchToolOptions</a></h4><p>touchToolOptions其实就是<a href="/touchTools/#touchTools">series</a>的一套模板。touchToolOptionsns中配置好touchTool的通用属性，那么在touchTool中只需要touchToolOptionsons中不同的属性再做个设值即可，避免了相同属性重复定义的麻烦。<br>下面是touchToolOptions相关属性的介绍：  </p>
+<pre><code><span class="string">"touchToolOptions"</span>: {
+    <span class="string">"NXCursorTool"</span>: {
+        ...
+    },
+    <span class="string">"NXLineTool"</span>: {
+        ...
+    },
+    <span class="string">"NXPieSpinTool"</span>: {
+        ...
+    },
+    <span class="string">"NXChangeActiveSeriesTool"</span>: {
+        ...
+    },
+    <span class="string">"NXHighLightTool"</span>: {
+        ...
+    },
+    <span class="string">"NXZoomTool"</span>: {
+        ...
+    },
+    <span class="string">"NXNavigationTool"</span>: {
+        ...
+    },
+    <span class="string">"NXMapHighLightTool"</span>: {
+        ...
+    }
+}
+</code></pre><p>touchToolOptions中各部分的含义见<a href="/touchTools/#touchTools">touchTools</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/NiuChart_chart_concept/" rel="prev" title="chartConfig">
+                chartConfig <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="NiuChart_quick_start/"
+           data-title="NiuChart Android SDK 快速入门" data-url="http://linsmalldragon.github.io/NiuChart_quick_start/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NiuChart_Android_SDK_快速入门"><span class="nav-number">1.</span> <span class="nav-text">NiuChart Android SDK 快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统要求"><span class="nav-number">1.0.1.</span> <span class="nav-text">系统要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.0.2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用入门"><span class="nav-number">1.0.2.3.</span> <span class="nav-text">使用入门</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HelloWorld图表"><span class="nav-number">1.0.3.</span> <span class="nav-text">HelloWorld图表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-_将数据库sqlite文件存放于/assets/report/目录下"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">1. 将数据库sqlite文件存放于/assets/report/目录下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-_将json配置文件存放于/assets/report/目录下"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">2. 将json配置文件存放于/assets/report/目录下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-_设置为线性图"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">3. 设置为线性图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-_你可以选择一个全局的主题应用到你的图表。"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">4. 你可以选择一个全局的主题应用到你的图表。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何设置chartOptions"><span class="nav-number">1.0.4.</span> <span class="nav-text">如何设置chartOptions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axisOptions"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">axisOptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#canvasOptions"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">canvasOptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#seriesOptions"><span class="nav-number">1.0.4.3.</span> <span class="nav-text">seriesOptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#touchToolOptions"><span class="nav-number">1.0.4.4.</span> <span class="nav-text">touchToolOptions</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

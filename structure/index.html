@@ -1,0 +1,776 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="NiuChart针对自身的数据结构设计了独有的数据库结构。相关属性如下：  
+&quot;dataStructure&quot;: {
+    &quot;measures&quot;: [{
+        &quot;key&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;&quot;,
+        &quot;sort&quot;: &quot;NXSortOperationNone&quot;,
+        &quot;aggregator&quot;: &quot;SUM&quot;,
+        &quot;isCrea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据模型">
+<meta property="og:url" content="http://linsmalldragon.github.io/structure/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="NiuChart针对自身的数据结构设计了独有的数据库结构。相关属性如下：  
+&quot;dataStructure&quot;: {
+    &quot;measures&quot;: [{
+        &quot;key&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;&quot;,
+        &quot;sort&quot;: &quot;NXSortOperationNone&quot;,
+        &quot;aggregator&quot;: &quot;SUM&quot;,
+        &quot;isCrea">
+<meta property="og:updated_time" content="2016-01-18T05:39:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据模型">
+<meta name="twitter:description" content="NiuChart针对自身的数据结构设计了独有的数据库结构。相关属性如下：  
+&quot;dataStructure&quot;: {
+    &quot;measures&quot;: [{
+        &quot;key&quot;: &quot;&quot;,
+        &quot;title&quot;: &quot;&quot;,
+        &quot;sort&quot;: &quot;NXSortOperationNone&quot;,
+        &quot;aggregator&quot;: &quot;SUM&quot;,
+        &quot;isCrea">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 数据模型 | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                数据模型
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-17T15:16:14+08:00" content="2016-01-17">
+              2016-01-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/structure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="structure/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>NiuChart针对自身的数据结构设计了独有的数据库结构。相关属性如下：  </p>
+<pre><code><span class="string">"dataStructure"</span>: {
+    <span class="string">"measures"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+        <span class="string">"aggregator"</span>: <span class="string">"SUM"</span>,
+        <span class="string">"isCreated"</span>: <span class="literal">false</span>,
+        <span class="string">"formula"</span>: {
+            <span class="string">"type"</span>: <span class="string">""</span>,
+            <span class="string">"symbol"</span>: <span class="string">""</span>,
+            <span class="string">"value"</span>: <span class="string">""</span>,
+            <span class="string">"parameters"</span>: [{
+                <span class="string">"type"</span>: <span class="string">""</span>,
+                <span class="string">"symbol"</span>: <span class="string">""</span>,
+                <span class="string">"value"</span>: <span class="string">""</span>,
+                <span class="string">"parameters"</span>: [{
+
+                }]
+            }]
+        }
+    }],
+    <span class="string">"dimensions"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"granularities"</span>: [{
+            <span class="string">"key"</span>: <span class="string">""</span>,
+            <span class="string">"title"</span>: <span class="string">""</span>,
+            <span class="comment">// 以下属性只出现在card中，metaStructure中不需要</span>
+            <span class="string">"static"</span>: <span class="literal">false</span>,
+            <span class="string">"selectionValue"</span>: <span class="string">""</span>,
+            <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+            <span class="string">"index"</span>: <span class="number">0</span>,
+            <span class="string">"drillTo"</span>: <span class="literal">false</span>
+        }]
+    }],
+    <span class="string">"db"</span>: <span class="string">""</span>, <span class="comment">// 只出现在metaStructure中</span>
+    <span class="string">"encrypt"</span>: <span class="string">""</span>, <span class="comment">// 只出现在metaStructure中</span>
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}  
+</code></pre><p>structure节点描述了数据库结构所有的属性节点。structure有两种存在形式：一.表示整张report的原始数据库数据结构；二.表示每张card自己特有的数据库数据结构。  </p>
+<h2 id="形式一">形式一</h2><p>如果structure在report中，那么该structure就表示整张report的数据库数据结构，可以作为每张card的标准。一张report可以同时存在多个数据库，所以也包含多个structure。<br>report中structure具体的属性如下：  </p>
+<pre><code><span class="string">"metadataStructures"</span>: [{
+    <span class="string">"measures"</span>: [{
+        ...
+    }],
+    <span class="string">"dimensions"</span>: [{
+        ...
+    }],
+    <span class="string">"db"</span>: <span class="string">""</span>, 
+    <span class="string">"encrypt"</span>: <span class="string">""</span>, 
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}]  
+</code></pre><h3 id="measures">measures</h3><p>度量字段的相关属性：  </p>
+<pre><code><span class="string">"measures"</span>: [{
+    <span class="string">"key"</span>: <span class="string">""</span>,
+    <span class="string">"title"</span>: <span class="string">""</span>,
+    <span class="string">"isCreated"</span>: false,
+    <span class="string">"formula"</span>: {
+        <span class="string">"type"</span>: <span class="string">""</span>,
+        <span class="string">"symbol"</span>: <span class="string">""</span>,
+        <span class="string">"value"</span>: <span class="string">""</span>,
+        <span class="string">"parameters"</span>: [{
+            <span class="string">"type"</span>: <span class="string">""</span>,
+            <span class="string">"symbol"</span>: <span class="string">""</span>,
+            <span class="string">"value"</span>: <span class="string">""</span>,
+            <span class="string">"parameters"</span>: [{
+
+            }]
+        }]
+    },
+    <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+    <span class="string">"aggregator"</span>: <span class="string">"SUM"</span>
+}]  
+</code></pre><p>“key”：度量字段的唯一标识码。<br>“title”：度量字段的标签。<br>“sort”：度量值排序的方式。可选项有：”NXSortOperationNone”(无序),”NXSortOperationAsc”(增序),”NXSortOperationDesc”(降序)<br>“aggregator”：图表有可能出现图形粒度需要分组的情况，这时就需要将度量值根据该属性值进行分组。可选项有：”SUM”, “AVG”, “MIN”, “MAX”, “COUNT”. 默认为SUM。<br>“isCreated”：度量值不仅可以直接从数据库中读取，还可以根据formula计算得出。<br>“formula”：计算得出度量值的公式。具体属性见<a href="#formula">formula</a>  </p>
+<h3 id="formula"><a href="id:formula" target="_blank" rel="external">formula</a></h3><p>“type”：公式的类型。可选项有：”datafield”,”function”,”operator”,”constant”<br>“symbol”：公式的形式。不同的type，symbol也不一样。<br>“value”：具体的数值。<br>“parameters”：进行公式的参数。该参数也可以由自身公式计算的来。  </p>
+<ul>
+<li>当type为”datafield”时，表示度量值直接从数据库中读取，symbol应该设置为数据库中measure的key。</li>
+<li>当type为”function”时，表示度量值由指定函数计算得出。当且仅支持abs  </li>
+<li>当type为”operator”时，表示度量值由操作符计算得出。可选项有”divide”(除),”minus”(减),”multiply”(乘),”plus”(加)。  </li>
+<li><p>当type为”constant”时，表示度量值为value属性设置的常亮值。  </p>
+<h3 id="dimensions">dimensions</h3><p>维度字段的相关属性：  </p>
+<p>  “dimensions”: [{</p>
+<pre><code><span class="string">"key"</span>: <span class="string">""</span>,
+<span class="string">"title"</span>: <span class="string">""</span>,
+<span class="string">"granularities"</span>: [{
+    <span class="string">"key"</span>: <span class="string">""</span>,
+    <span class="string">"title"</span>: <span class="string">""</span>
+}]
+</code></pre><p>  }]<br>“key”：维度字段的唯一标识码。<br>“title”：维度字段的标签。<br>“granularities”：粒度字段的相关属性类似于dimension的。  </p>
+</li>
+</ul>
+<p>“db”: “”, // 只出现在metaStructure中<br>“encrypt”: “”, // 只出现在metaStructure中<br>“dataSetId”: “”</p>
+<h3 id="db">db</h3><p>该structure代表的数据库在程序中的文件名。例如NiuChartDB.sqlite。  </p>
+<h3 id="encrypt">encrypt</h3><p>若该属性为空，则表示数据库文件不加密。不然设置该数据库文件的加密密码。  </p>
+<h3 id="dataSetId">dataSetId</h3><p>该属性作为structure与数据库映射的标识码。相同dataSetId值的structure表示同一个数据库。  </p>
+<h2 id="形式二">形式二</h2><p>如果structure在card中，那么该structure就表示每张card的数据库数据结构。一张card只存在一个数据库，所以只包含一个structure。<br>card中structure具体的属性：  </p>
+<pre><code><span class="string">"dataStructure"</span>: {
+    <span class="string">"measures"</span>: [{
+        ...
+    }],
+    <span class="string">"dimensions"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"granularities"</span>: [{
+            ...
+        }]
+    }],
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}  
+</code></pre><h3 id="measure">measure</h3><p>度量字段的相关属性如下：  </p>
+<pre><code>{
+    "<span class="attribute">key</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">title</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">sort</span>": <span class="value"><span class="string">"NXSortOperationNone"</span></span>,
+    "<span class="attribute">aggregator</span>": <span class="value"><span class="string">"SUM"</span>
+</span>}  
+</code></pre><p>card中的measure属性类似于report的。”sort”和”aggregator”属性可以沿用或覆盖report中的对应属性。  </p>
+<h3 id="granularity">granularity</h3><p>粒度字段的相关属性：  </p>
+<pre><code>{
+    "<span class="attribute">key</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">title</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">static</span>": <span class="value"><span class="literal">false</span></span>,
+    "<span class="attribute">selectionValue</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">sort</span>": <span class="value"><span class="string">"NXSortOperationNone"</span></span>,
+    "<span class="attribute">index</span>": <span class="value"><span class="number">0</span></span>,
+    "<span class="attribute">drillTo</span>": <span class="value"><span class="literal">false</span>
+</span>}  
+</code></pre><p>“static”：该key代表的维度数据是否是静态的。如果是静态的，那么该key代表的维度数据一直是”selectionValue”设定的数据；否则维度数据从数据库中动态读取。<br>“selectionValue”：静态数据。<br>“sort”：粒度值排序的方式。可选项有：”NXSortOperationNone”(无序),”NXSortOperationAsc”(增序),”NXSortOperationDesc”(降序)<br>“drillTo”：所属维度是否钻取到该粒度。维度默认只能钻取到第一个粒度，该属性的设置可以改变为钻取到指定粒度。<br>“index”：程序利用该属性值将图表上的所有可见粒度进行排序。以至于能够实现不同维度的粒度之间的切换。比如：区域维度下的华东区可以钻取到时间维度下的年粒度，接着又钻取到区域维度下的浙江省粒度。<br>“dataSetId”：card利用该属性与report中的metaStructure进行映射。相同的dataSetId代表的structure代表同一个数据库。  </p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/series/" rel="next" title="series">
+                <i class="fa fa-chevron-left"></i> series
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/card/" rel="prev" title="card">
+                card <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="structure/"
+           data-title="数据模型" data-url="http://linsmalldragon.github.io/structure/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#形式一"><span class="nav-number">1.</span> <span class="nav-text">形式一</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#measures"><span class="nav-number">1.1.</span> <span class="nav-text">measures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#formula"><span class="nav-number">1.2.</span> <span class="nav-text">formula</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dimensions"><span class="nav-number">1.3.</span> <span class="nav-text">dimensions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#db"><span class="nav-number">1.4.</span> <span class="nav-text">db</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#encrypt"><span class="nav-number">1.5.</span> <span class="nav-text">encrypt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dataSetId"><span class="nav-number">1.6.</span> <span class="nav-text">dataSetId</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#形式二"><span class="nav-number">2.</span> <span class="nav-text">形式二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#measure"><span class="nav-number">2.1.</span> <span class="nav-text">measure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#granularity"><span class="nav-number">2.2.</span> <span class="nav-text">granularity</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NiuChart API" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="当chartType设置为NXChartType.NXChart时，card使用如下样式：  
+{
+    &quot;chart&quot;: {
+        ...
+    },
+    &quot;footer&quot;: {
+        ...
+    },
+    &quot;detailTopPanel&quot;: {
+        ...
+    },
+    &quot;detailTotalPanel&quot;: {
+        ...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chart类型为NXChart的样式">
+<meta property="og:url" content="http://linsmalldragon.github.io/NXChart_type_concept/index.html">
+<meta property="og:site_name" content="NiuChart-API">
+<meta property="og:description" content="当chartType设置为NXChartType.NXChart时，card使用如下样式：  
+{
+    &quot;chart&quot;: {
+        ...
+    },
+    &quot;footer&quot;: {
+        ...
+    },
+    &quot;detailTopPanel&quot;: {
+        ...
+    },
+    &quot;detailTotalPanel&quot;: {
+        ...">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/detailTopPanel.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/detailTotalPanel.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/detailLeftPanel.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/annotation.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/detailRightPanel.png">
+<meta property="og:image" content="http://linsmalldragon.github.io/img/detailTopCooperateLeftCompare.png">
+<meta property="og:updated_time" content="2016-01-18T01:28:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="chart类型为NXChart的样式">
+<meta name="twitter:description" content="当chartType设置为NXChartType.NXChart时，card使用如下样式：  
+{
+    &quot;chart&quot;: {
+        ...
+    },
+    &quot;footer&quot;: {
+        ...
+    },
+    &quot;detailTopPanel&quot;: {
+        ...
+    },
+    &quot;detailTotalPanel&quot;: {
+        ...">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> chart类型为NXChart的样式 | NiuChart-API </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+    <div class="site-meta-headline">
+      <a>
+        <img class="custom-logo-image" src="/images/logo_06.png"
+             alt="NiuChart-API"/>
+      </a>
+    </div>
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NiuChart-API</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                chart类型为NXChart的样式
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-12T10:08:04+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NXChart_type_concept/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NXChart_type_concept/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>当chartType设置为NXChartType.NXChart时，card使用如下样式：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"chart"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"footer"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailTopPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailTotalPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailLeftPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"annotation"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailRightPanel"</span>: <span class="collection">{
+        ...
+    }</span>
+}</span>  
+</code></pre><h2 id="chart">chart</h2><p>chart配置的相关属性见<a href="/NiuChart_chart_concept">chart</a></p>
+<h2 id="footer">footer</h2><p>chart底部导航条的样式。相关属性如下：  </p>
+<pre><code><span class="string">"footer"</span>: {
+    <span class="string">"navigation"</span>: {
+        <span class="string">"visible"</span>: <span class="literal">true</span>,
+        <span class="string">"navigationType"</span>: <span class="string">"NXSliderTypeChart"</span>,
+        <span class="string">"orientation"</span>: <span class="string">"horizontal"</span>,
+        <span class="string">"minGapDistance"</span>: <span class="number">0</span>,
+        <span class="string">"maxGapDistance"</span>: <span class="number">0</span>,
+        <span class="string">"outRangeFill"</span>: {
+            <span class="string">"visible"</span>: <span class="literal">false</span>,
+            <span class="string">"fillColor"</span>: <span class="string">""</span>,
+            <span class="string">"fillAlpha"</span>: <span class="number">0.3</span>,
+            <span class="string">"cornerRadius"</span>: <span class="number">0</span>
+        },
+        <span class="string">"inRangeFill"</span>: {
+            <span class="string">"visible"</span>: <span class="literal">false</span>,
+            <span class="string">"fillColor"</span>: <span class="string">""</span>,
+            <span class="string">"fillAlpha"</span>: <span class="number">0.3</span>,
+            <span class="string">"cornerRadius"</span>: <span class="number">0</span>
+        },
+        <span class="string">"backgroundTrackFill"</span>: {
+            ...
+        },
+        <span class="string">"handleBarFill"</span>: {
+            ...
+        }
+    }
+    <span class="string">"length"</span>: <span class="number">40</span>
+}  
+</code></pre><p>“length”：当导航条是水平的时候，导航条的高度为length；当导航条是垂直的时候，导航条的宽度为length。</p>
+<h3 id="navigation">navigation</h3><p>chart底部导航条的样式。相关属性如下：  </p>
+<pre><code><span class="string">"navigation"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"navigationType"</span>: <span class="string">"NXSliderTypeChart"</span>,
+    <span class="string">"orientation"</span>: <span class="string">"horizontal"</span>,
+    <span class="string">"minGapDistance"</span>: <span class="number">0</span>,
+    <span class="string">"maxGapDistance"</span>: <span class="number">0</span>,
+    <span class="string">"outRangeFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"inRangeFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"backgroundTrackFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"handleBarFill"</span>: {
+        <span class="attribute">...</span>
+    }
+}  
+</code></pre><p>“visible”：表示底部导航条是否可见。<br>“navigationType”：底部导航条的类型。可选项有：”NXSliderTypeChart”(有缩略图),”NXSliderTypeLine”(中间只有一根线)<br>“orientation”：底部导航条的方向。可以是”horizontal”(水平),”vertical”(垂直)<br>“minGapDistance”：两端最小的间距。<br>“maxGapDistance”：两端最大的间距。<br>“outRangeFill”：当”navigationType”为”NXSliderTypeChart”时，未选中区域背景的填充。相关属性见<a href="#footerFillStyle">footerFillStyle</a><br>“inRangeFill”：当”navigationType”为”NXSliderTypeChart”时，已选中区域背景的填充。相关属性见<a href="#footerFillStyle">footerFillStyle</a><br>“backgroundTrackFill”：当”navigationType”为”NXSliderTypeLine”时，垂直居中背景线的风格。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“handleBarFill”：当”navigationType”为”NXSliderTypeLine”时，拖动条的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a>  </p>
+<h2 id="footerFillStyle"><a href="id:footerFillStyle" target="_blank" rel="external">footerFillStyle</a></h2><p>chart底部导航条区域背景的填充。相关属性如下：  </p>
+<pre><code>{
+    "<span class="attribute">visible</span>": <span class="value"><span class="literal">false</span></span>,
+    "<span class="attribute">fillColor</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">fillAlpha</span>": <span class="value"><span class="number">0.3</span></span>,
+    "<span class="attribute">cornerRadius</span>": <span class="value"><span class="number">0</span>
+</span>}  
+</code></pre><p>“visible”：该区域背景是否可见。<br>“fillColor”：该区域背景的填充色。<br>“fillAlpha”：该区域背景的透明度。<br>“cornerRadius”：该区域背景框角的孤度。  </p>
+<h2 id="detailTopPanel"><a href="id:detailTopPanel" target="_blank" rel="external">detailTopPanel</a></h2><p>顶部的数据详情面板。该面板为通用面板，即所有类型的图表都可以通过json文件配置得到。相关属性如下：<br><img src="/img/detailTopPanel.png" alt="detailTopPanel">  </p>
+<pre><code><span class="string">"detailTopPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"type"</span>: <span class="string">"NXDetailNormal"</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"percentInTotalVisible"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“visible”：设置该面板是否显示。<br>“type”：设置该面板的显示类型。具体属性见<a href="#detailPanelType">detailPanelType</a><br>“isAlwaysVisible”：设置该面板是否一直可见。若是的话，位下title下面；若不是的话，覆盖在title上。<br>“percentInTotalVisible”：设置该面板的数值在总数中的百分比是否显示。  </p>
+<h2 id="detailTotalPanel">detailTotalPanel</h2><p>额外的数据详情总数面板。该面板默认图表是饼图时才显示。相关属性如下：<br><img src="/img/detailTotalPanel.png" alt="detailTotalPanel">  </p>
+<pre><code><span class="string">"detailTotalPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAboveDetailTop"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“visible”：设置该面板是否显示。<br>“isAboveDetailTop”：设置该面板是否显示在<a href="#detailTopPanel">detailTopPanel</a>的上面。</p>
+<h2 id="detailLeftPanel">detailLeftPanel</h2><p>左侧的数据详细面版。该面板默认在pad端且图表是泡泡图时才显示。相关属性如下：<br><img src="/img/detailLeftPanel.png" alt="detailLeftPanel">  </p>
+<pre><code><span class="string">"detailLeftPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"type"</span>: <span class="string">"NXDetailMultiMeasureVertical"</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"percentInTotalVisible"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“<a href="id:visible" target="_blank" rel="external">visible</a>“：设置该面板是否显示。如果该面板显示，那么该面板会自动将”<a href="#isAlwaysVisible">isAlwaysVisible</a>“设置为false;并且双指时显示配合左详细面板的比较器，见<a href="id:detailTopCooperateLeftCompare" target="_blank" rel="external">NXDetailTopCooperateLeftCompare</a>。<br>“type”：设置该面板的显示类型。具体属性见<a href="#detailPanelType">detailPanelType</a><br>“<a href="id:isAlwaysVisible" target="_blank" rel="external">isAlwaysVisible</a>“：设置该面板是否一直可见。若是的话，位下title下面；若不是的话，覆盖在title上。当<a href="#visible">visible</a>为true时，该属性无效。<br>“percentInTotalVisible”：设置该面板的数值在总数中的百分比是否显示。  </p>
+<h2 id="annotation">annotation</h2><p>当图表中存在多个series时，可以通过annotation来筛选显示需要的series。当图表是泡泡图的时候，默认显示annotation。相关属性如下：<br><img src="/img/annotation.png" alt="annotation">  </p>
+<pre><code><span class="string">"annotation"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"horizontal"</span>: <span class="literal">false</span>,
+    <span class="string">"width"</span>: <span class="number">170</span>,
+    <span class="string">"itemHeight"</span>: <span class="number">40</span>,
+    <span class="string">"decorationMarginLeft"</span>: <span class="number">1</span>,
+    <span class="string">"titleMarginLeft"</span>: <span class="number">20</span>,
+    <span class="string">"titleStyle"</span>: {
+        ...
+    },
+    <span class="string">"symbolStyle"</span>: {
+        ...
+    }
+}  
+</code></pre><p>“visible”：设置annotaion是否显示。<br>“isAlwaysVisible”：设置是否一直显示。<br>“horizontal”：设置是水平显示series列表还是垂直显示。<br>“width”：宽度。<br>“itemHeight”：条目的高度。<br>“decorationMarginLeft”：左侧的checkBox距离左侧的margin值。<br>“titleMarginLeft”：title标签距离左侧的margin值。<br>“titleStyle”：title标签的文本样式。具体属性见<a href="/general_style/#textStyle">textStyle</a><br>“symbolStyle”：checkBox的样式。具体属性见<a href="/general_style/#symbol">symbol</a></p>
+<h2 id="detailRightPanel">detailRightPanel</h2><p>右侧的图形粒度数据点呈现列表。只有饼图和地图才有该面板。相关属性如下：<br><img src="/img/detailRightPanel.png" alt="detailRightPanel">  </p>
+<pre><code><span class="string">"detailRightPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"maxWidth"</span>: <span class="number">0</span>,
+    <span class="string">"measureValueHeight"</span>: <span class="number">35</span>,
+    <span class="string">"measurePercentHeight"</span>: <span class="number">20</span>,
+    <span class="string">"textColor"</span>: <span class="string">"#dcdde0"</span>,
+    <span class="string">"smallTitleValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"bigTitleValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"isSmallTitlePercent"</span>: <span class="literal">true</span>,
+    <span class="string">"smallTitlePercentFormatString"</span>: <span class="string">"#,#%"</span>
+}  
+</code></pre><p>“visible”：设置该面板是否可见。<br>“isAlwaysVisible”：设置该面板是否一直可见。<br>“maxWidth”：行的最大宽度，当最大限制是0时表示无限制。<br>“measureValueHeight”：显示数据值的控件的高度。<br>“measurePercentHeight”：显示数据值百分比的控件的高度。<br>“textColor”：文本的常态颜色。<br>“smallTitleValueSource”：小标题的数据源。<br>“bigTitleValueSource”：大标题的数据源。<br>“isSmallTitlePercent”：是否小标题显示百分比。<br>“smallTitlePercentFormatString”：小标题百分比的格式化。  </p>
+<h2 id="detailPanelType"><a href="id:detailPanelType" target="_blank" rel="external">detailPanelType</a></h2><p>详细面板的类型。可选项有：  </p>
+<ul>
+<li>常态。”NXDetailNormal”,”NXDetailNormalCompare”  </li>
+<li>目标值与实际值对比。”NXDetailNormalTargetReal”  </li>
+<li>常态大字体版本。”NXDetailBigValueNormal”,”NXDetailBigValueNormalCompare”  </li>
+<li>竖直多度量，用于气泡图。”NXDetailMultiMeasureVertical”,”NXDetailMultiMeasureVerticalCompare”  </li>
+<li>竖直多度量，用于气泡图，2行版本。”NXDetailMultiMeasureHorizontal”,”NXDetailMultiMeasureHorizontalCompare”  </li>
+<li>横向多度量，用于气泡图。”NXDetailMultiMeasureGrid”,”NXDetailMultiMeasureGridCompare”  </li>
+<li><a href="id:detailTopCooperateLeftCompare" target="_blank" rel="external">NXDetailTopCooperateLeftCompare</a>：与左侧详细面板组合用的上边比较器。具体概念见图：<br>  <img src="/img/detailTopCooperateLeftCompare.png" alt="detailTopCooperateLeftCompare"></li>
+<li>NXDetailVertical：phone端竖直的。  </li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/NiuChart-logo视觉规范/" rel="next" title="NiuChart logo视觉规范">
+                <i class="fa fa-chevron-left"></i> NiuChart logo视觉规范
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/NXCubeCard_style/" rel="prev" title="card类型为NXCubeCard时chart样式总览">
+                card类型为NXCubeCard时chart样式总览 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="NXChart_type_concept/"
+           data-title="chart类型为NXChart的样式" data-url="http://linsmalldragon.github.io/NXChart_type_concept/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/logo_17.png" alt="NiuChart-Team" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">NiuChart-Team</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chart"><span class="nav-number">1.</span> <span class="nav-text">chart</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#footer"><span class="nav-number">2.</span> <span class="nav-text">footer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#navigation"><span class="nav-number">2.1.</span> <span class="nav-text">navigation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#footerFillStyle"><span class="nav-number">3.</span> <span class="nav-text">footerFillStyle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailTopPanel"><span class="nav-number">4.</span> <span class="nav-text">detailTopPanel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailTotalPanel"><span class="nav-number">5.</span> <span class="nav-text">detailTotalPanel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailLeftPanel"><span class="nav-number">6.</span> <span class="nav-text">detailLeftPanel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#annotation"><span class="nav-number">7.</span> <span class="nav-text">annotation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailRightPanel"><span class="nav-number">8.</span> <span class="nav-text">detailRightPanel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailPanelType"><span class="nav-number">9.</span> <span class="nav-text">detailPanelType</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NiuChart-Team</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"niuchartapi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
