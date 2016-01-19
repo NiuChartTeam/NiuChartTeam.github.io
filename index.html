@@ -164,15 +164,223 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/guide/" itemprop="url">
+                  NiuChart中文教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-19T15:46:40+08:00" content="2016-01-19">
+              2016-01-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/guide/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="guide/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
-        
-        
-        
       
 
       
+        
+          <span itemprop="articleBody">
+            
+              <p>  本教程旨在帮助开发人员使用NiuChart SDK时，理解和配置json文件。<br>下面是几个常用的模块：  </p>
+<ul>
+<li><a href="/NiuChart_quick_start">快速入门</a>  </li>
+<li><a href="/NiuChart_chart_concept">图表的概念</a>  </li>
+<li><a href="/structure">数据模型</a>  </li>
+<li><a href="/NXCubeCard_style">图表类型</a>  </li>
+<li><a href="/card">卡片类型</a>  </li>
+<li><a href="/general_style">图表的设计和样式</a>  </li>
+<li><a href="/page">报表的概念</a></li>
+</ul>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/page/" itemprop="url">
+                  report
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-18T15:29:23+08:00" content="2016-01-18">
+              2016-01-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="page/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="report">report</h2><p>报表的相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"id"</span>: <span class="string">""</span>,
+    <span class="string">"width"</span>: <span class="number">0</span>,
+    <span class="string">"height"</span>: <span class="number">0</span>,
+    <span class="string">"title"</span>: <span class="string">""</span>,
+    <span class="string">"subTitle"</span>: <span class="string">""</span>,
+    <span class="string">"description"</span>: <span class="string">""</span>,
+    <span class="string">"note"</span>: <span class="string">""</span>,
+    <span class="string">"creator"</span>: <span class="string">""</span>,
+    <span class="string">"createDate"</span>: <span class="string">""</span>,
+    <span class="string">"lastUpdate"</span>: <span class="string">""</span>,
+    <span class="string">"version"</span>: <span class="string">""</span>,
+    <span class="string">"metadataStructures"</span>: <span class="collection">[<span class="collection">{
+        ...
+    }</span>]</span>,
+    <span class="string">"pages"</span>: <span class="collection">[<span class="collection">{
+        ...
+    }</span>]</span>
+}</span>  
+</code></pre><p>“id”：report在列表中的唯一标识符<br>“width”：指定report的宽度<br>“height”：指定report的高度<br>“title”：report的标题<br>“subTitle”：report的子标题<br>“description”：对该report的描述<br>“note”：report的注解<br>“creator”：report的创建者<br>“createDate”：report的创建时间<br>“lastUpdate”：report的更新时间<br>“version”：report的版本号<br>“metadataStructures”：report拥有的数据库的数据模型。详情见<a href="/structure">structure</a><br>“pages”：report内包含的所有page的属性。见<a href="#page">page</a>  </p>
+<h2 id="page"><a href="id:page" target="_blank" rel="external">page</a></h2><p>瀑布流页的相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"id"</span>: <span class="string">""</span>,
+    <span class="string">"index"</span>: <span class="number">0</span>,
+    <span class="string">"note"</span>: <span class="string">""</span>,
+    <span class="string">"pageTitle"</span>: <span class="string">""</span>,
+    <span class="string">"pageColor"</span>: <span class="string">""</span>,
+    <span class="string">"cards"</span>: <span class="collection">[<span class="collection">{
+        ...
+    }</span>]</span>
+}</span>  
+</code></pre><p>“id”：page在report中的唯一标识符<br>“index”：page在report中的索引<br>“note”：page的注解<br>“pageTitle”：page的标题<br>“pageColor”：page页的主题色。<br>“cards”：page页内包含的所有card的属性。见<a href="/card">card</a>  </p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -325,6 +533,1499 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/card/" itemprop="url">
+                  card
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-18T11:19:10+08:00" content="2016-01-18">
+              2016-01-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/card/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="card/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>card的属性节点如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>,
+    <span class="string">"dataStructure"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"subCards"</span>: <span class="collection">[<span class="collection">{
+        ...
+    }</span>]</span>,
+    <span class="string">"type"</span>: <span class="string">"NXBlankCard"</span>,
+    <span class="string">"id"</span>: <span class="string">""</span>,
+    <span class="string">"cardTitle"</span>: <span class="string">""</span>,
+    <span class="string">"size"</span>: <span class="string">"row-xs-12 col-xs-12 row-md-6 col-md-6"</span>,
+
+    // 是cube时，才需要style和linkEvent
+    <span class="string">"style"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"linkEvent"</span>: <span class="collection">{
+        <span class="string">"isEventSource"</span>: <span class="literal">true</span>
+    }</span>,
+
+    // 不是cube时，初始化时一进来就是小卡片状态
+    <span class="string">"initSmallCardMode"</span>: <span class="literal">false</span>
+}</span>  
+</code></pre><p>“dataSetId”：card拥有的数据库对应于report中metaStructure的key。<br>“dataStructure”：card拥有的数据库的structure。与report中具有相同dataSetId的metaStructure对应的是同一个数据库。详情见<a href="/structure">structure</a><br>“subCards”：如果card包含有子card，那么card将表示为容器。子card的相关属性节点同card<br>“type”：card的类型。可选项有：＂NXCubeCard＂，＂NXImageCard＂，＂NXTextCard＂，＂NXBlankCard＂，＂NXContainerCard＂。　　</p>
+<ul>
+<li>如果type为＂NXCubeCard＂时，需要给card配置”<a href="#NXCubeCard_style">style</a>“和”linkEvent”属性。  </li>
+<li>如果type不是＂NXCubeCard＂时，需要给card配置<a href="#NXCard_style">chartStyle</a>。  </li>
+<li>如果type为＂NXContainerCard＂时，需要给card配置”initSmallCardMode”属性。”initSmallCardMode”表示card是否以小卡片模式显示。当card以小卡片模式显示时，只显示标题、条件、顶部的详细面板。<br>“id”：card的唯一标识码。<br>“cardTitle”：card的标题。<br>“size”：card在不同尺寸设备上显示的大小。详情见<a href="#differentSizeAdapter">不同屏幕尺寸的适配</a><br>“linkEvent”：卡片是否当作联动事件源，有哪些观察者等配置信息。如果card的type设置为NXCubeCard，需要设置linkEvent属性  <h2 id="不同屏幕尺寸的适配"><a href="id:differentSizeAdapter" target="_blank" rel="external">不同屏幕尺寸的适配</a></h2>NiuChart内置了一套响应式栅格系统排版系统，随着外层视图的尺寸变化产生相应的排版，可将同一报表适应于平板电脑及手机。默认将横向分割成12列，竖向也分割成12列。根据屏幕分别将长宽分成4类：超小-xs，小-sm，中等-md，大-lg。栅格设置在父容器宽度大于或等于阈值的时候起作用，并且将小的长宽设置覆盖掉。因此，对任何一个元素应用任何.col-md- 将不仅作用于中等尺寸的屏幕，还将作用于大屏幕设备（如果没有设置.col-lg-的话）<br>可用以下设置宽度：col-xs-<em>, col-sm-</em>, col-md-<em>, col-lg-</em>. 星号为[0,numberOfColumns]到间的整数。例如将宽度设置成”col-md-4 col-sm-6”表示父容器宽度在md范围情况下占父容器的三分之一，父容器宽度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。<br>可用以下设置高度：row-xs-<em>, row-sm-</em>, row-md-<em>, row-lg-</em>. 星号为[0,numberOfRows]到间的整数。例如将高度设置成”row-md-4 row-sm-6”表示父容器高度在md范围情况下占父容器的三分之一，父容器高度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。</li>
+</ul>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/structure/" itemprop="url">
+                  数据模型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-17T15:16:14+08:00" content="2016-01-17">
+              2016-01-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/structure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="structure/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>NiuChart针对自身的数据结构设计了独有的数据库结构。相关属性如下：  </p>
+<pre><code><span class="string">"dataStructure"</span>: {
+    <span class="string">"measures"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+        <span class="string">"aggregator"</span>: <span class="string">"SUM"</span>,
+        <span class="string">"isCreated"</span>: <span class="literal">false</span>,
+        <span class="string">"formula"</span>: {
+            <span class="string">"type"</span>: <span class="string">""</span>,
+            <span class="string">"symbol"</span>: <span class="string">""</span>,
+            <span class="string">"value"</span>: <span class="string">""</span>,
+            <span class="string">"parameters"</span>: [{
+                <span class="string">"type"</span>: <span class="string">""</span>,
+                <span class="string">"symbol"</span>: <span class="string">""</span>,
+                <span class="string">"value"</span>: <span class="string">""</span>,
+                <span class="string">"parameters"</span>: [{
+
+                }]
+            }]
+        }
+    }],
+    <span class="string">"dimensions"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"granularities"</span>: [{
+            <span class="string">"key"</span>: <span class="string">""</span>,
+            <span class="string">"title"</span>: <span class="string">""</span>,
+            <span class="comment">// 以下属性只出现在card中，metaStructure中不需要</span>
+            <span class="string">"static"</span>: <span class="literal">false</span>,
+            <span class="string">"selectionValue"</span>: <span class="string">""</span>,
+            <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+            <span class="string">"index"</span>: <span class="number">0</span>,
+            <span class="string">"drillTo"</span>: <span class="literal">false</span>
+        }]
+    }],
+    <span class="string">"db"</span>: <span class="string">""</span>, <span class="comment">// 只出现在metaStructure中</span>
+    <span class="string">"encrypt"</span>: <span class="string">""</span>, <span class="comment">// 只出现在metaStructure中</span>
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}  
+</code></pre><p>structure节点描述了数据库结构所有的属性节点。structure有两种存在形式：一.表示整张report的原始数据库数据结构；二.表示每张card自己特有的数据库数据结构。  </p>
+<h2 id="形式一">形式一</h2><p>如果structure在report中，那么该structure就表示整张report的数据库数据结构，可以作为每张card的标准。一张report可以同时存在多个数据库，所以也包含多个structure。<br>report中structure具体的属性如下：  </p>
+<pre><code><span class="string">"metadataStructures"</span>: [{
+    <span class="string">"measures"</span>: [{
+        ...
+    }],
+    <span class="string">"dimensions"</span>: [{
+        ...
+    }],
+    <span class="string">"db"</span>: <span class="string">""</span>, 
+    <span class="string">"encrypt"</span>: <span class="string">""</span>, 
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}]  
+</code></pre><h3 id="measures">measures</h3><p>度量字段的相关属性：  </p>
+<pre><code><span class="string">"measures"</span>: [{
+    <span class="string">"key"</span>: <span class="string">""</span>,
+    <span class="string">"title"</span>: <span class="string">""</span>,
+    <span class="string">"isCreated"</span>: false,
+    <span class="string">"formula"</span>: {
+        <span class="string">"type"</span>: <span class="string">""</span>,
+        <span class="string">"symbol"</span>: <span class="string">""</span>,
+        <span class="string">"value"</span>: <span class="string">""</span>,
+        <span class="string">"parameters"</span>: [{
+            <span class="string">"type"</span>: <span class="string">""</span>,
+            <span class="string">"symbol"</span>: <span class="string">""</span>,
+            <span class="string">"value"</span>: <span class="string">""</span>,
+            <span class="string">"parameters"</span>: [{
+
+            }]
+        }]
+    },
+    <span class="string">"sort"</span>: <span class="string">"NXSortOperationNone"</span>,
+    <span class="string">"aggregator"</span>: <span class="string">"SUM"</span>
+}]  
+</code></pre><p>“key”：度量字段的唯一标识码。<br>“title”：度量字段的标签。<br>“sort”：度量值排序的方式。可选项有：”NXSortOperationNone”(无序),”NXSortOperationAsc”(增序),”NXSortOperationDesc”(降序)<br>“aggregator”：图表有可能出现图形粒度需要分组的情况，这时就需要将度量值根据该属性值进行分组。可选项有：”SUM”, “AVG”, “MIN”, “MAX”, “COUNT”. 默认为SUM。<br>“isCreated”：度量值不仅可以直接从数据库中读取，还可以根据formula计算得出。<br>“formula”：计算得出度量值的公式。具体属性见<a href="#formula">formula</a>  </p>
+<h3 id="formula"><a href="id:formula" target="_blank" rel="external">formula</a></h3><p>“type”：公式的类型。可选项有：”datafield”,”function”,”operator”,”constant”<br>“symbol”：公式的形式。不同的type，symbol也不一样。<br>“value”：具体的数值。<br>“parameters”：进行公式的参数。该参数也可以由自身公式计算的来。  </p>
+<ul>
+<li>当type为”datafield”时，表示度量值直接从数据库中读取，symbol应该设置为数据库中measure的key。</li>
+<li>当type为”function”时，表示度量值由指定函数计算得出。当且仅支持abs  </li>
+<li>当type为”operator”时，表示度量值由操作符计算得出。可选项有”divide”(除),”minus”(减),”multiply”(乘),”plus”(加)。  </li>
+<li><p>当type为”constant”时，表示度量值为value属性设置的常亮值。  </p>
+<h3 id="dimensions">dimensions</h3><p>维度字段的相关属性：  </p>
+<p>  “dimensions”: [{</p>
+<pre><code><span class="string">"key"</span>: <span class="string">""</span>,
+<span class="string">"title"</span>: <span class="string">""</span>,
+<span class="string">"granularities"</span>: [{
+    <span class="string">"key"</span>: <span class="string">""</span>,
+    <span class="string">"title"</span>: <span class="string">""</span>
+}]
+</code></pre><p>  }]<br>“key”：维度字段的唯一标识码。<br>“title”：维度字段的标签。<br>“granularities”：粒度字段的相关属性类似于dimension的。  </p>
+</li>
+</ul>
+<p>“db”: “”, // 只出现在metaStructure中<br>“encrypt”: “”, // 只出现在metaStructure中<br>“dataSetId”: “”</p>
+<h3 id="db">db</h3><p>该structure代表的数据库在程序中的文件名。例如NiuChartDB.sqlite。  </p>
+<h3 id="encrypt">encrypt</h3><p>若该属性为空，则表示数据库文件不加密。不然设置该数据库文件的加密密码。  </p>
+<h3 id="dataSetId">dataSetId</h3><p>该属性作为structure与数据库映射的标识码。相同dataSetId值的structure表示同一个数据库。  </p>
+<h2 id="形式二">形式二</h2><p>如果structure在card中，那么该structure就表示每张card的数据库数据结构。一张card只存在一个数据库，所以只包含一个structure。<br>card中structure具体的属性：  </p>
+<pre><code><span class="string">"dataStructure"</span>: {
+    <span class="string">"measures"</span>: [{
+        ...
+    }],
+    <span class="string">"dimensions"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"title"</span>: <span class="string">""</span>,
+        <span class="string">"granularities"</span>: [{
+            ...
+        }]
+    }],
+    <span class="string">"dataSetId"</span>: <span class="string">""</span>
+}  
+</code></pre><h3 id="measure">measure</h3><p>度量字段的相关属性如下：  </p>
+<pre><code>{
+    "<span class="attribute">key</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">title</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">sort</span>": <span class="value"><span class="string">"NXSortOperationNone"</span></span>,
+    "<span class="attribute">aggregator</span>": <span class="value"><span class="string">"SUM"</span>
+</span>}  
+</code></pre><p>card中的measure属性类似于report的。”sort”和”aggregator”属性可以沿用或覆盖report中的对应属性。  </p>
+<h3 id="granularity">granularity</h3><p>粒度字段的相关属性：  </p>
+<pre><code>{
+    "<span class="attribute">key</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">title</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">static</span>": <span class="value"><span class="literal">false</span></span>,
+    "<span class="attribute">selectionValue</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">sort</span>": <span class="value"><span class="string">"NXSortOperationNone"</span></span>,
+    "<span class="attribute">index</span>": <span class="value"><span class="number">0</span></span>,
+    "<span class="attribute">drillTo</span>": <span class="value"><span class="literal">false</span>
+</span>}  
+</code></pre><p>“static”：该key代表的维度数据是否是静态的。如果是静态的，那么该key代表的维度数据一直是”selectionValue”设定的数据；否则维度数据从数据库中动态读取。<br>“selectionValue”：静态数据。<br>“sort”：粒度值排序的方式。可选项有：”NXSortOperationNone”(无序),”NXSortOperationAsc”(增序),”NXSortOperationDesc”(降序)<br>“drillTo”：所属维度是否钻取到该粒度。维度默认只能钻取到第一个粒度，该属性的设置可以改变为钻取到指定粒度。<br>“index”：程序利用该属性值将图表上的所有可见粒度进行排序。以至于能够实现不同维度的粒度之间的切换。比如：区域维度下的华东区可以钻取到时间维度下的年粒度，接着又钻取到区域维度下的浙江省粒度。<br>“dataSetId”：card利用该属性与report中的metaStructure进行映射。相同的dataSetId代表的structure代表同一个数据库。  </p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/series/" itemprop="url">
+                  series
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-17T15:16:14+08:00" content="2016-01-17">
+              2016-01-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/series/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="series/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="series"><a href="id:series" target="_blank" rel="external">series</a></h1><p>图表上一系列的数据，例如一个条形图或者一个柱形图。所有绘制在图表上的数据都来自series。下面是NXLineSeries的简单概述:<br><img src="/img/series.png" alt="lineSeries"><br>相关属性如下：  </p>
+<pre><code><span class="string">"series"</span>: <span class="preprocessor">[</span>{
+    <span class="string">"type"</span>: <span class="string">"NXLineSeries"</span>
+    <span class="attribute">...</span>
+}<span class="preprocessor">]</span><span class="markup"></span>
+</code></pre><h2 id="type">type</h2><p>表示sereis的类型。series的类型有：”<a href="#scatterSeries">NXScatterSeries</a>“、”<a href="#lineSeries">NXLineSeries</a>“、”<a href="#areaSeries">NXAreaSeries</a>“、”<a href="#barSeries">NXBarSeries</a>“、”<a href="#bubbleSeries">NXBubbleSeries</a>“、”<a href="#stepLineSeries">NXStepLineSeries</a>“、”<a href="#mapSeries">NXMapSeries</a>“、”<a href="#pieSeries">NXPieSeries</a>“、”<a href="#ringSeries">NXRingSeries</a>“、”<a href="#singleSeries">NXSingleSeries</a>“。<br>给series设置以上不同的类型，就可以得到不同类型的图表。<br>series的其他属性节点可以不用设置。series针对不同的类型都有一套模板，使得不用重复配置相同属性节点。series想要配置特殊的属性值，只需要覆盖模板的相应属性。模板见<a href="/NiuChart_quick_start/#seriesOptions">seriesOptions</a></p>
+<h2 id="NXSeriesStyle"><a href="id:seriesStyle" target="_blank" rel="external">NXSeriesStyle</a></h2><p>所有类型series模板的基类。相关属性如下：  </p>
+<pre><code>｛
+    <span class="string">"id"</span>: <span class="string">""</span>,
+    <span class="string">"name"</span>: <span class="string">""</span>,
+    <span class="string">"isSeriesPureColor"</span>: <span class="literal">true</span>,
+    <span class="string">"fill"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"minZoomRange"</span>: <span class="number">80</span>,
+    <span class="string">"sort"</span>: {
+        <span class="string">"sortSource"</span>: <span class="string">"Y"</span>,
+        <span class="string">"sortType"</span>: <span class="string">"NXSortOperationNone"</span>
+    },
+    <span class="string">"displayInFrontEvenUnActive"</span>: <span class="literal">false</span>,
+    <span class="string">"iteration"</span>: {
+        <span class="string">"isMultiLevel"</span>: <span class="literal">false</span>,
+        <span class="string">"stackGroupMap"</span>: {
+
+        },
+        <span class="string">"isLeafLevel"</span>: <span class="literal">false</span>,
+        <span class="string">"measureToGraphicGran"</span>: [{
+
+        }]
+    },
+    <span class="string">"dataSource"</span>: {
+        <span class="string">"xValueSource"</span>: <span class="string">""</span>,
+        <span class="string">"yValueSource"</span>: <span class="string">""</span>,
+        <span class="string">"yValueSourceQueue"</span>: [],
+        <span class="string">"y2ValueSource"</span>: <span class="string">""</span>,
+        <span class="string">"y2ValueSourceQueue"</span>: [],
+        <span class="string">"fillColorValueSource"</span>: <span class="string">""</span>,
+
+        <span class="string">"xFormatNumberUnit"</span>: <span class="literal">false</span>,
+        <span class="string">"yFormatNumberUnit"</span>: <span class="literal">false</span>,
+        <span class="string">"y2FormatNumberUnit"</span>: <span class="literal">false</span>,
+        <span class="string">"xFormatString"</span>: <span class="string">",###"</span>,
+        <span class="string">"yFormatString"</span>: <span class="string">",###"</span>,
+        <span class="string">"y2FormatString"</span>: <span class="string">",###"</span>,
+        <span class="string">"xDisplayDateFormatString"</span>: <span class="string">""</span>,
+        <span class="string">"xDataSourceDateFormatString"</span>: <span class="string">""</span>,
+        <span class="string">"xDisplayDateLocale"</span>: <span class="string">""</span>,
+        <span class="string">"xDataSourceDateLocale"</span>: <span class="string">""</span>,
+        <span class="string">"valueFormats"</span>: [{
+            <span class="string">"formatString"</span>: <span class="string">",###"</span>,
+            <span class="string">"formatNumberUnit"</span>: <span class="literal">false</span>,
+            <span class="string">"valueSource"</span>: <span class="string">""</span>
+        }]
+
+        <span class="string">"limitDataCount"</span>: <span class="number">0</span>,
+        <span class="string">"colorRange"</span>: {
+            <span class="string">"valueSource"</span>: <span class="string">""</span>,
+            <span class="string">"linearRange"</span>: [{
+                <span class="string">"value"</span>: <span class="number">0</span>,
+                <span class="string">"color"</span>: {
+                    <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+                    <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+                }
+            }],
+            <span class="string">"sectionRange"</span>: [{
+                <span class="string">"fromValue"</span>: <span class="number">0</span>,
+                <span class="string">"toValue"</span>: <span class="number">60</span>,
+                <span class="string">"color"</span>: {
+                    <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+                    <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+                },
+                <span class="string">"legend"</span>: <span class="string">"不及格"</span>
+            }],
+            <span class="string">"dataRange"</span>: {
+                <span class="string">"fromValue"</span>: <span class="number">0</span>,
+                <span class="string">"toValue"</span>: <span class="number">100</span>
+            }
+        }
+    }
+｝
+</code></pre><p>“id”：series的唯一标识。<br>“<a href="id:seriesName" target="_blank" rel="external">name</a>“：series的名字,可以是中文。<br>“isSeriesPureColor”：表示series的每个数据点是否使用一样的颜色。一般情况下同个series的不同数据点都会使用相同的颜色，但是像饼图每个数据点（即每个扇叶）的颜色就会不一样。<br>“fill”：该series的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“minZoomRange”：当图表有导航条的时候，可以手势拖动对图表进行缩放，该属性表示series能进行缩放的最小范围。<br>“displayInFrontEvenUnActive”：表示是否设置无论在激活或未激活状态，该series一直显示在前面。  </p>
+<h3 id="sort">sort</h3><p>将series按配置的属性值进行排序。  </p>
+<pre><code><span class="string">"sort"</span>: {
+    <span class="string">"sortSource"</span>: <span class="string">"Y"</span>,
+    <span class="string">"sortType"</span>: <span class="string">"NXSortOperationNone"</span>
+}
+</code></pre><p>“sortSource”：series中要进行排序的数据源。可选项有：X，Y，Y2。<br>“sortType”：排序的类型。可选项有：NXSortOperationNone(不排序)，NXSortOperationAsc(增序)，NXSortOperationDesc(降序)</p>
+<h3 id="iteration">iteration</h3><p>系列迭代器，用它在某个粒度上产生多个series。分为两种情况：一.单/多系列；二.单值系列。相关属性如下：    </p>
+<pre><code><span class="string">"iteration"</span>: {
+    <span class="string">"isMultiLevel"</span>: false,
+    <span class="string">"stackGroupMap"</span>: {
+
+    },
+    <span class="string">"isLeafLevel"</span>: false,
+    <span class="string">"measureToGraphicGran"</span>: [{
+
+    }]
+}
+</code></pre><h4 id="单/多系列"><a href="id:singleOrMulti" target="_blank" rel="external">单/多系列</a></h4><p>以下两个属性用于设置图表是多系列图还是单系列图。默认是单系列图。<br>“isMultiLevel”：表示是否是多系列。如果该属性设置为true，那么就表示是多系列，图表中会有多个系列叠加显示的效果；如果该属性设置为false，那么就是单系列。<br>“stackGroupMap”：<a href="#seriesName">seriesName</a>列表和stackGroupKey的映射。具有相同stackGroupKey的series属于同一个stackGroup。同一个stackGroup的series可以重叠或累加显示，具体效果要看stackedType设置的属性值。关于stackedType属性，下文有介绍。</p>
+<h4 id="单值系列">单值系列</h4><p>“isLeafLevel”：表示是否是叶子节点。用于单值图和环图，图表只需要一个数据点。如果该属性设置为true即叶子节点，那么iteration下有关单/多系列的属性都失效。<br>“measureToGraphicGran”：当”isLeafLevel”设置为true时，配置的度量变成图形粒度显示在图里。  </p>
+<h3 id="dataSource">dataSource</h3><p>series的数据来源，包含了series的数据源和数据格式等属性。相关的属性如下：  </p>
+<pre><code><span class="string">"dataSource"</span>: {
+    <span class="string">"xValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"yValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"yValueSourceQueue"</span>: [],
+    <span class="string">"y2ValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"y2ValueSourceQueue"</span>: [],
+
+    <span class="string">"xDisplayDateFormatString"</span>: <span class="string">""</span>,
+    <span class="string">"xDataSourceDateFormatString"</span>: <span class="string">""</span>,
+    <span class="string">"xDisplayDateLocale"</span>: <span class="string">""</span>,
+    <span class="string">"xDataSourceDateLocale"</span>: <span class="string">""</span>,
+    <span class="string">"valueFormats"</span>: [{
+        <span class="string">"formatString"</span>: <span class="string">",###"</span>,
+        <span class="string">"formatNumberUnit"</span>: <span class="literal">false</span>,
+        <span class="string">"valueSource"</span>: <span class="string">""</span>
+    }],
+
+    <span class="string">"limitDataCount"</span>: <span class="number">0</span>,
+    <span class="string">"colorRange"</span>: {
+        <span class="string">"valueSource"</span>: <span class="string">""</span>,
+        <span class="string">"linearRange"</span>: [{
+            <span class="string">"value"</span>: <span class="number">0</span>,
+            <span class="string">"color"</span>: {
+                <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+                <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+            }
+        }],
+        <span class="string">"sectionRange"</span>: [{
+            <span class="string">"fromValue"</span>: <span class="number">0</span>,
+            <span class="string">"toValue"</span>: <span class="number">60</span>,
+            <span class="string">"color"</span>: {
+                <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+                <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+            },
+            <span class="string">"legend"</span>: <span class="string">"不及格"</span>
+        }],
+        <span class="string">"dataRange"</span>: {
+            <span class="string">"fromValue"</span>: <span class="number">0</span>,
+            <span class="string">"toValue"</span>: <span class="number">100</span>
+        } 
+    }
+}
+</code></pre><h4 id="数据源">数据源</h4><p>设置的数据源key也就是度量key，来自该card的structure中的measures。<br>“xValueSource”：标识x轴的数据源key。<br>“yValueSource”：标识y轴的数据源key。<br>“yValueSourceQueue”：标识y轴的数据源key列表，用来切换小卡片的y1度量。<br>“y2ValueSource”：标识半径的数据源key，用于泡泡图。<br>“y2ValueSourceQueue”：标识半径的数据源key列表，用来切换小卡片的y2度量。   </p>
+<h4 id="格式化">格式化</h4><p>“xDisplayDateFormatString”：最终显示出来的日期格式化。<br>“xDataSourceDateFormatString”：数据源的日期格式化。即数据库里存的日期格式。<br>“xDisplayDateLocale”：最终显示出来的日期语言。中文：zh,英文：en<br>“xDataSourceDateLocale”：数据源的日期语言。中文：zh,英文：en</p>
+<h4 id="valueFormats"><a href="id:valueFormats" target="_blank" rel="external">valueFormats</a></h4><p>针对数据源key的储备格式。想将某个数据源按某个格式显示，只需要配置该数据源的valueFormat。  </p>
+<pre><code><span class="string">"valueFormats"</span>: [{
+  <span class="string">"formatString"</span>: <span class="string">",###"</span>,
+  <span class="string">"formatNumberUnit"</span>: <span class="literal">false</span>,
+  <span class="string">"valueSource"</span>: <span class="string">""</span>
+}]
+</code></pre><p>“formatString”：格式化字符串。<br>“formatNumberUnit”：是否使用数字单位，目前仅支持k、m之类的。<br>“valueSource”：数据源key。 </p>
+<p>“limitDataCount”：数据点限制量，用于排名只看前几位  </p>
+<h4 id="colorRange"><a href="id:colorRange" target="_blank" rel="external">colorRange</a></h4><p>将指定数据源的数据按区间范围呈现不同颜色。颜色的呈现方式有种形式：一.<a href="#linearRange">线性渐变</a>；二.<a href="#sectionRange">颜色区段划分</a>。相关属性如下：    </p>
+<pre><code><span class="string">"colorRange"</span>: {
+    <span class="string">"valueSource"</span>: <span class="string">""</span>,
+    <span class="string">"linearRange"</span>: [{
+        <span class="string">"value"</span>: <span class="number">0</span>,
+        <span class="string">"color"</span>: {
+            <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+            <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+        }
+    }],
+    <span class="string">"sectionRange"</span>: [{
+        <span class="string">"fromValue"</span>: <span class="number">0</span>,
+        <span class="string">"toValue"</span>: <span class="number">60</span>,
+        <span class="string">"color"</span>: {
+            <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+            <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+        },
+        <span class="string">"legend"</span>: <span class="string">"不及格"</span>
+    }],
+    <span class="string">"dataRange"</span>: {
+        <span class="string">"fromValue"</span>: <span class="number">0</span>,
+        <span class="string">"toValue"</span>: <span class="number">100</span>
+    }
+}
+</code></pre><p>“valueSource”：数据源key。  </p>
+<h5 id="线性渐变"><a href="id:linearRange" target="_blank" rel="external">线性渐变</a></h5><pre><code><span class="string">"linearRange"</span>: [{
+    <span class="string">"value"</span>: <span class="number">0</span>,
+    <span class="string">"color"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    }
+}]
+</code></pre><p>“value”：逻辑数据值，与坐标轴无关。<br>“color”：在value值时，呈现的颜色。具体属性见<a href="/general_style/#fillColor">fillColor</a><br><code>注意</code>：linearRange数组必须要两个以上的元素。介于value值之间的数据呈现渐变的中间色。  </p>
+<h4 id="颜色分段划分"><a href="id:sectionRange" target="_blank" rel="external">颜色分段划分</a></h4><pre><code><span class="string">"sectionRange"</span>: [{
+    <span class="string">"fromValue"</span>: <span class="number">0</span>,
+    <span class="string">"toValue"</span>: <span class="number">60</span>,
+    <span class="string">"color"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"legend"</span>: <span class="string">"不及格"</span>
+}],
+<span class="string">"dataRange"</span>: {
+    <span class="string">"fromValue"</span>: <span class="number">0</span>,
+    <span class="string">"toValue"</span>: <span class="number">100</span>
+}
+</code></pre><p>“sectionRange”：<br>指明在某个数据段要呈现的颜色。  </p>
+<ul>
+<li>“fromValue”：开始的逻辑数据值。  </li>
+<li>“toValue”：结束的逻辑数据值。  </li>
+<li>“color”：数据值在[fromValue, toValue)之间呈现的颜色。</li>
+<li>“legend”：这段数据的说明。  </li>
+</ul>
+<p>“dataRange”：<br>指明数据的全局范围。  </p>
+<ul>
+<li>“fromValue”：数据段的最小值  </li>
+<li>“toValue”：数据段的最大值  <h2 id="NXXYAbstractSeriesStyle"><a href="id:xyAbstractSeriesStyle" target="_blank" rel="external">NXXYAbstractSeriesStyle</a></h2>所有带坐标轴series模板的基类。相关属性如下：  </li>
+</ul>
+<pre><code>{
+    <span class="comment">// NXSeriesStyle</span>
+    ...
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="string">"orientation"</span>: <span class="string">"vertical"</span>,
+    <span class="string">"xAxis"</span>: <span class="string">"bottom"</span>,
+    <span class="string">"yAxis"</span>: <span class="string">"left"</span>,
+    <span class="string">"isTargetSeries"</span>: <span class="literal">false</span>,
+    <span class="string">"minUnitPointLength"</span>: <span class="number">5</span>,
+    <span class="string">"accumulation"</span>: <span class="literal">false</span>,
+    <span class="string">"standOnShoulder"</span>: <span class="literal">false</span>,
+    <span class="string">"showOverlayAll"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>NXXYAbstractSeriesStyle沿用<a href="#seriesStyle">NXSeriesStyle</a>的样式。<br>“orientation”：表示series呈现图表的方向。默认为vertical，当然可选值还有horizontal。<br>“xAxis”：给series指定x坐标，只需要将属性值设置为指定x轴的id。<br>“yAxis”：给series指定y坐标，只需要将属性值设置为指定y轴的id。<br>“isTargetSeries”：是否是目标系列，用来与实际系列对比标记哪个是目标。默认为false。<br>“<a href="id:minUnitPointLength" target="_blank" rel="external">minUnitPointLength</a>“：2个逻辑点之间的最小视图长度。可以控制navigation的出现和消失。当数据点的视图长度小于minUnitPointLength时，navigation就会出现。<br>“accumulation”：是否累计。如果设置为累计，那么第n个数据点显示的值为前n-1个数据点和自己本身的累加值。<br>“standOnShoulder”：是否叠加基于之前的值,但值还是显示原来的值，不显示累计。<br>“showOverlayAll”：是否显示全部数据叠加起来的效果，该属性只在standOnShoulder为true的前提下有效。柱子只在type=NXChartSeriesStackedTypeOverlap 情况下有效。  </p>
+<h2 id="NXScatterSeries"><a href="id:scatterSeries" target="_blank" rel="external">NXScatterSeries</a></h2><p>散点图的样式。<a href="#bubbleSeries">NXBubbleSeries</a>、<a href="#areaSeries">NXAreaSeries</a>、<a href="#lineSeries">NXLineSeries</a>的模板基类。相关属性如下：<br><img src="/img/scatterSeries.png" alt="scatterSeries">  </p>
+<pre><code><span class="string">"NXScatterSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXScatterSeriesStyle</span>
+    <span class="string">"symbol"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"defaultSymbolAlphaWhenSymbolNotSpecified"</span>: <span class="number">1</span>
+}
+</code></pre><p>NXScatterSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>的相关属性，当然也可以覆盖替换掉相应的属性。<br>“symbol”：散点图需要有标记物来显示数据点，具体属性见<a href="/general_style/#symbol">symbol</a><br>“defaultSymbolAlphaWhenSymbolNotSpecified”：当symbol没有在json中指定时，scatter、bubble呈现有50%的透明度。<br>“<a href="#minUnitPointLength">minUnitPointLength</a>“属性只在坐标轴(/axis/#axisType)类型为”NXAxisTypeCategory”或”NXAxisTypeDateTime”，并且单位长度的视图距离不等于0时有效。  </p>
+<h2 id="NXLineSeries"><a href="id:lineSeries" target="_blank" rel="external">NXLineSeries</a></h2><p>线性图的样式。<a href="#stepLineSeries">NXStepLineSeries</a>的模板基类。相关属性如下：<br><img src="/img/lineSeries.png" alt="lineSeries">  </p>
+<pre><code><span class="string">"NXLineSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXScatterSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXLineSeriesStyle</span>
+    <span class="string">"lineType"</span>: <span class="string">"NXPlotInterpolationLinear"</span>,
+    <span class="string">"lineStyle"</span>: {
+        <span class="attribute">...</span>
+    }
+}
+</code></pre><p>NXLineSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>、<a href="#scatterSeries">NXScatterSeries</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“lineType”：两个数据点之间连线的类型。可选项有：NXPlotInterpolationLinear(直线)，NXPlotInterpolationCurved(贝塞尔曲线)。<br>“lineStyle”：两个数据点之间连线的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a>。  </p>
+<h2 id="NXAreaSeries"><a href="id:areaSeries" target="_blank" rel="external">NXAreaSeries</a></h2><p>面积图的样式。相关属性如下：<br><img src="/img/areaSeries.png" alt="areaSeries">  </p>
+<pre><code><span class="string">"NXAreaSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXScatterSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXAreaSeriesStyle</span>
+    <span class="string">"lineType"</span>: <span class="string">"NXPlotInterpolationLinear"</span>,
+    <span class="string">"lineStyle"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"areaFillAboveLine"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"areaFillBelowLine"</span>: {
+        <span class="string">"fillAlpha"</span>: <span class="number">0</span>,
+        <span class="string">"fillColor"</span>: <span class="string">"#000000"</span>
+    },
+    <span class="string">"stackedType"</span>: <span class="string">"NXChartSeriesStackedTypeStack"</span>
+}
+</code></pre><p>NXAreaSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>、<a href="#scatterSeries">NXScatterSeries</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“lineType”：两个数据点之间连线的类型。可选项有：NXPlotInterpolationLinear(直线)，NXPlotInterpolationCurved(贝塞尔曲<br>“lineStyle”：两个数据点之间连线的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a>。<br>“areaFillAboveLine”：数据连线上的面积填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“areaFillBelowLine”：数据连线下的面积填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“stackedType”：图形系列排列形式。可选项有：NXChartSeriesStackedTypeOverlap(竖向重叠)、NXChartSeriesStackedTypeSide(横向排放)、NXChartSeriesStackedTypeStack(竖向叠加)、NXChartSeriesStackedTypeStack100(竖向100%)。  </p>
+<h2 id="NXBarSeries"><a href="id:barSeries" target="_blank" rel="external">NXBarSeries</a></h2><p>柱状图样式。相关属性如下：<br><img src="/img/barSeries.png" alt="barSeries">  </p>
+<pre><code><span class="string">"NXBarSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    ...
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    ...
+
+    <span class="comment">// NXBarSeriesStyle</span>
+    <span class="string">"stackedType"</span>: <span class="string">"NXChartSeriesStackedTypeSide"</span>,
+    <span class="string">"interSeriesPadding"</span>: <span class="number">0.1</span>,
+    <span class="string">"interSeriesSetPadding"</span>: <span class="number">0.1</span>,
+    <span class="string">"seriesUnitScale"</span>: <span class="number">1</span>,
+    <span class="string">"stackGroup"</span>: <span class="string">"0"</span>,
+    <span class="string">"lineStyle"</span>: {
+        ...
+    },
+    <span class="string">"barFill"</span>: {
+        ...
+    },
+    <span class="string">"barOffsetScale"</span>: <span class="number">1</span>,
+    <span class="string">"barCornerRadius"</span>: <span class="number">0</span>,
+    <span class="string">"barBaseCornerRadius"</span>: <span class="number">0</span>,
+    <span class="string">"barWidthsAreInViewCoordinates"</span>: <span class="literal">false</span>,
+    <span class="string">"isUsingPathDrawing"</span>: <span class="literal">false</span>
+}
+</code></pre><p>NXAreaSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“<a href="id:stackedType" target="_blank" rel="external">stackedType</a>“：图形系列排列形式。可选项有：NXChartSeriesStackedTypeOverlap(竖向重叠)、NXChartSeriesStackedTypeSide(横向排放)、NXChartSeriesStackedTypeStack(竖向叠加)、NXChartSeriesStackedTypeStack100(竖向100%)。<br>“interSeriesPadding”：同一堆下，两个柱子之间的间距，范围[0.0f, 1.0f] 为可用空间百分比，如未设置则由 Series 自己计算<br>“interSeriesSetPadding”：不同堆之间，两个堆之间的间距，范围[0.0f, 1.0f] 为可用空间百分比，如未设置则由 Series 自己计算<br>“seriesUnitScale”：柱子间隔单位不为1的情况下，提供该值来使柱子的宽度正常<br>“stackGroup”：设置堆栈组的key。具有相同stackGroupKey的series属于同一个stackGroup。同一个stackGroup的series可以重叠或累加显示，具体效果要看<a href="#stackedType">stackedType</a>设置的属性值。<br>“lineStyle”：柱子边框线的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a><br>“barFill”：柱子的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“barOffsetScale”：动画时柱子偏移量的缩放因子<br>“barCornerRadius”：柱子上面两个点的圆角半径，默认为0。<br>“barBaseCornerRadius”：柱子下面两个点的圆角半径，默认为0。<br>“barWidthsAreInViewCoordinates”：表明柱子的宽度和柱子的偏移量是使用视图坐标还是逻辑坐标。默认false，使用逻辑坐标。<br>“isUsingPathDrawing”：是否使用Path类来绘制图形。默认false，Path类绘制相对比较耗性能。  </p>
+<h2 id="NXBubbleSeries"><a href="id:bubbleSeries" target="_blank" rel="external">NXBubbleSeries</a></h2><p>泡泡图的样式。相关属性如下：<br><img src="/img/bubbleSeries.png" alt="bubbleSeries">  </p>
+<pre><code><span class="string">"NXBubbleSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXScatterSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXBubbleSeriesStyle</span>
+    <span class="string">"maxRadius"</span>: <span class="number">40</span>,
+    <span class="string">"minRadius"</span>: <span class="number">5</span>
+}
+</code></pre><p>NXBubbleSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>、<a href="#scatterSeries">NXScatterSeries</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“maxRadius”：泡泡最大的半径。<br>“minRadius”：泡泡最小的半径。  </p>
+<h2 id="NXStepLineSeries"><a href="id:stepLineSeries" target="_blank" rel="external">NXStepLineSeries</a></h2><p>梯形图的样式。相关属性如下：<br><img src="/img/stepLineSeries.png" alt="stepLineSeries">  </p>
+<pre><code><span class="string">"NXStepLineSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXXYAbstractSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXScatterSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXLineSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXStepLineSeriesStyle</span>
+    <span class="string">"stepLineType"</span>: <span class="string">"NXStepLinePlotTypeStepCenter"</span>,
+    <span class="string">"verticalJoinsVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"DrawComplete"</span>: <span class="literal">true</span>
+}
+</code></pre><p>NXBubbleSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>、<a href="#xyAbstractSeriesStyle">NXXYAbstractSeriesStyle</a>、<a href="#scatterSeries">NXScatterSeries</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“stepLineType”：梯形线绘制的类型。可选项有：”NXStepLinePlotTypeStepForward”(梯形线以数据点为起始点)、”NXStepLinePlotTypeStepCenter”(梯形线以数据点为中心点)、”NXStepLinePlotTypeStepBackward”(数据线以数据点为结束点)。<br>“verticalJoinsVisible”：相邻两个数据点的起始点和结束点的连接是否可见。默认可见。<br>“DrawComplete”：梯形线是否画完整。默认stepLineType是center的时候画完整的图形。即第一个点和最后一个点可以出现整条平的线。  </p>
+<h2 id="NXMapSeries"><a href="id:mapSeries" target="_blank" rel="external">NXMapSeries</a></h2><p>地图的样式。地图是一个大区域，由很多的小区域组装而成，下面是对小区域样式的解析。相关属性如下：<br><img src="/img/mapSeries.png" alt="mapSeries">  </p>
+<pre><code><span class="string">"NXMapSeries"</span>: {
+    // NXSeriesStyle
+    ...
+
+    // NXMapSeriesStyle
+    <span class="string">"regionFill"</span>: {
+        ...
+    },
+    <span class="string">"regionLine"</span>: {
+        ...
+    },
+    <span class="string">"plotSymbol"</span>: {
+        ...
+    },
+    <span class="string">"focusZoomOnSelect"</span>: false,
+
+    <span class="string">"mapRegionGroups"</span>: [{
+        <span class="string">"key"</span>: <span class="string">""</span>,
+        <span class="string">"name"</span>: <span class="string">""</span>,
+        <span class="string">"regionLine"</span>: {
+            ...
+        },
+        <span class="string">"regionFill"</span>: {
+            ...
+        },
+        <span class="string">"values"</span>: [{
+            <span class="string">""</span>
+        }]
+    }],
+    <span class="string">"mapMarkers"</span>: [{
+        <span class="string">"name"</span>: <span class="string">""</span>,
+        <span class="string">"latitude"</span>: <span class="number">0</span>,
+        <span class="string">"longitude"</span>: <span class="number">0</span>,
+        <span class="string">"markerSymbol"</span>: {
+            ...
+        }
+    }],
+    <span class="string">"mapType"</span>: <span class="string">"China"</span>,
+    <span class="string">"customResource"</span>: <span class="string">""</span>
+}
+</code></pre><p>NXMapSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>的相关属性。当然也可以覆盖替换掉相应的属性。  </p>
+<h3 id="区域通用属性">区域通用属性</h3><p>“regionFill”：区域普遍的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“regionLine”：区域边界线普遍的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a><br>“plotSymbol”：地图上需要有标记物来标注某个指定的地理位置。该属性指代标记物普遍的样式。相关属性见<a href="/general_style/#symbol">symbol</a><br>“focusZoomOnSelect”：是否当某个区域选中的时候该区域放大。  </p>
+<h3 id="区域分组属性"><a href="#regionGeneralProperty">区域分组属性</a></h3><h4 id="mapType">mapType</h4><p>指明地图的类型。可选项有：”China”、”USA”、”World”、”Europe”、”Custom”。除了”Custom”，如果设置了其他地图类型，那么NiuChart就会自动导入相应类型地图的SVG。  </p>
+<h4 id="customResource">customResource</h4><p>如果设置了<code>mapType</code>为<code>Custom</code>自定义地图，那么就需要给customResource设置自定义SVG地图资源的文件名。该自定义SVG地图资源文件存放在NiuChart-Chart工程下的res/raw/路径下。  </p>
+<h4 id="mapRegionGroups">mapRegionGroups</h4><p>NiuChart针对需要区域划分的场景，提出了对地图区域进行分组的概念。例如，需要将中国地图分组为华东、华西、华北、华南、华中，每个分组中都包含若干个省，同个分组中的不同省份使用相同的样式来显示。相关属性如下：                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </p>
+<pre><code><span class="string">"mapRegionGroups"</span>: [{
+    <span class="string">"key"</span>: <span class="string">""</span>,
+    <span class="string">"name"</span>: <span class="string">""</span>,
+    <span class="string">"regionLine"</span>: {
+        ...
+    },
+    <span class="string">"regionFill"</span>: {
+        ...
+    },
+    <span class="string">"values"</span>: [{
+        <span class="string">""</span>
+    }]
+}]
+</code></pre><p>“key”：区域分组的key。<br>“name”：区域分组的name。<br>“regionLine”：区域分组内所有区域边界线的样式。<br>“regionFill”：区域分组内所有区域的填充色。<br>“values”：区域分组所包含区域的key列表。该列表中的区域都属于该分组，共同使用该分组的”regionLine”和”regionFill”，覆盖替换掉<a href="#regionGeneralProperty">区域通用属性</a>中的相应属性。  </p>
+<h4 id="mapMarkers">mapMarkers</h4><p>地图上需要有标记物来标注某个具体经纬度的地理位置。相关属性如下：  </p>
+<pre><code><span class="string">"mapMarkers"</span>: [{
+    <span class="string">"name"</span>: <span class="string">""</span>,
+    <span class="string">"latitude"</span>: <span class="keyword">Float</span>.NaN,
+    <span class="string">"longitude"</span>: <span class="keyword">Float</span>.NaN,
+    <span class="string">"markerSymbol"</span>: {
+        ...
+    }
+}]
+</code></pre><p>“name”：该标记物的名称。<br>“latitude”：标记物所在地理位置的纬度。<br>“longitude”：标记所在地理位置的经度。<br>“markerSymbol”：标记物的样式。相关属性见<a href="/general_style/#symbol">symbol</a>  </p>
+<h2 id="NXPieSeries"><a href="id:pieSeries" target="_blank" rel="external">NXPieSeries</a></h2><p>饼图的样式。相关属性如下：<br><img src="/img/pieSeries.png" alt="pieSeries">  </p>
+<pre><code><span class="string">"NXPieSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXPieSeriesStyle</span>
+    <span class="string">"pieRadius"</span>: <span class="string">"100%"</span>,
+    <span class="string">"pieInnerRadius"</span>: <span class="string">"0"</span>,
+    <span class="string">"startAngle"</span>: <span class="string">"0"</span>,
+    <span class="string">"endAngle"</span>: <span class="string">"0"</span>,
+    <span class="string">"sliceDirection"</span>: <span class="string">"NXPieDirectionClockwise"</span>,
+    <span class="string">"centerAnchor"</span>: {
+        <span class="string">"x"</span>: <span class="number">0.5</span>,
+        <span class="string">"y"</span>: <span class="number">0.5</span>
+    },
+    <span class="string">"indicatorAngle"</span>: <span class="number">0</span>,
+    <span class="string">"borderLineStyle"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"overlayFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"triangleFill"</span>: {
+        <span class="attribute">...</span>
+    }
+}
+</code></pre><p>NXPieSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“pieRadius”：饼图的半径。可以是具体的数值，也可以是相对于整张图表的百分比。默认是100%。<br>“pieInnerRadius”：饼图的内半径。可以是具体的数值，也可以是相对于整张图表的百分比。默认是0。<br>“startAngle”：饼图转动开始的角度。默认0。<br>“endAngle”：饼图转动结束的角度。默认0。<br>“sliceDirection”：饼图转动的方向。默认为顺时针。可选项有：”NXPieDirectionClockwise”(顺时针)、”NXPieDirectionCounterClockwise”(逆时针)。<br>“centerAnchor”：饼图的圆心锚点。默认为整张图表的中心，(0.5,0.5)。<br>“indicatorAngle”：指示器的角度。默认0。<br>“borderLineStyle”：饼图区块的边界线的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a><br>“overlayFill”：饼图区块上的覆盖物的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“triangleFill”：三角形指示器的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a>  </p>
+<h2 id="NXRingSeries"><a href="id:ringSeries" target="_blank" rel="external">NXRingSeries</a></h2><p>环图的样式。相关属性如下：<br><img src="/img/ringSeries.png" alt="ringSeries">  </p>
+<pre><code><span class="string">"NXRingSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    ...
+
+    <span class="comment">// NXRingSeriesStyle</span>
+    <span class="string">"radius"</span>: <span class="string">"100%"</span>,
+    <span class="string">"ringWidth"</span>: <span class="number">20</span>,
+    <span class="string">"noteTitleStyle"</span>: {
+        ...
+    },
+    <span class="string">"legendTitleStyle"</span>: {
+        ..
+    },
+    <span class="string">"backFill"</span>: {
+        ...
+    },
+    <span class="string">"centerAnchor"</span>: {
+        <span class="string">"x"</span>: <span class="number">0.5</span>,
+        <span class="string">"y"</span>: <span class="number">0.5</span>
+    },
+    <span class="string">"legendLabelHeight"</span>: <span class="number">44</span>
+}
+</code></pre><p>NXRingSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“radius”：内环的半径。可以是具体的数值，也可以是相对于整张图表的百分比。默认是100%。<br>“ringWidth”：内环和外环的间距。单位为dp。<br>“noteTitleStyle”：环内的文本样式。具体属性见<a href="/general_style/#textStyle">textStyle</a><br>“legendTitleStyle”：环底部的说明标签文本样式。具体属性见<a href="/general_style/#textStyle">textStyle</a><br>“backFill”：环的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“centerAnchor”：圆心的锚点。默认为整张图表的中心，(0.5,0.5)。<br>“legendLabelHeight”：环底部的说明标签高度。默认是44dp。  </p>
+<h2 id="NXSingleSeries"><a href="id:singleSeries" target="_blank" rel="external">NXSingleSeries</a></h2><p>单值图的样式。相关属性如下：<br><img src="/img/singleSeries.png" alt="singleSeries">  </p>
+<pre><code><span class="string">"NXSingleSeries"</span>: {
+    <span class="comment">// NXSeriesStyle</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// NXSingleSeriesStyle</span>
+    <span class="string">"legendTitle"</span>: <span class="string">""</span>,
+    <span class="string">"legendLabelHeight"</span>: <span class="number">44</span>,
+    <span class="string">"barWidth"</span>: <span class="number">40</span>,
+    <span class="string">"noteTitleStyle"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"legendTitleStyle"</span>: {
+        <span class="attribute">...</span>
+    },
+
+    <span class="string">"backFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"centerAnchor"</span>: {
+        <span class="string">"x"</span>: <span class="number">0.5</span>,
+        <span class="string">"y"</span>: <span class="number">0.5</span>
+    },
+    <span class="string">"targetLineStyle"</span>: {
+        <span class="attribute">...</span>
+    }
+}
+</code></pre><p>NXSingleSeries沿用<a href="#seriesStyle">NXSeriesStyle</a>的相关属性。当然也可以覆盖替换掉相应的属性。<br>“legendTitle”：single series 的说明标签。如果设置了legendTitle,将会用此标题替换原colorRange里设定的legend。<br>“legendLabelHeight”：说明标签的高度。如果legendTitle不为null，默认为44；否则默认为0。<br>“barWidth”：表示单值图的柱子的宽度。默认为40.<br>“noteTitleStyle”：柱子上面文本的样式。相关属性见<a href="/general_style/#textStyle">textStyle</a><br>“legendTitleStyle”：说明标签的文本样式。相关属性见<a href="/general_style/#textStyle">textStyle</a><br>“backFill”：柱子的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“centerAnchor”：绘制的中心锚点。默认为整张图表的中心，(0.5,0.5)<br>“targetLineStyle”：目标线的样式。相关属性见<a href="/general_style/#lineStyle">lineStyle</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/NXSuperList_type_chart/" itemprop="url">
+                  chart类型为NXSuperList的样式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-17T15:16:14+08:00" content="2016-01-17">
+              2016-01-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NXSuperList_type_chart/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NXSuperList_type_chart/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>当chartType设置为NXChartType.NXSuperList时，card显示如下图效果：<br><img src="/img/superList.png" alt="superList"><br>相关属性如下：  </p>
+<pre><code><span class="string">"superList"</span>: {
+    <span class="string">"autoPageScroll"</span>: <span class="literal">true</span>,
+    <span class="string">"rows"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"header"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"columns"</span>: <span class="preprocessor">[</span>{
+        <span class="attribute">...</span>
+    }<span class="preprocessor">]</span><span class="markup">
+}  </span>
+</code></pre><h2 id="autoPageScroll">autoPageScroll</h2><p>手指滑动时，是否自动翻页。  </p>
+<h2 id="rows">rows</h2><p>superList中各行的样式属性。相关属性如下：  </p>
+<pre><code><span class="string">"rows"</span>: {
+    <span class="string">"oddColor"</span>: <span class="string">"<span class="subst">#FAFAFA</span>"</span>,
+    <span class="string">"evenColor"</span>: <span class="string">"<span class="subst">#FFFFFF</span>"</span>,
+    <span class="string">"rowHeight"</span>: <span class="number">32</span>
+}  
+</code></pre><p>“oddColor”：奇数行的填充色。<br>“evenColor”：偶数行的填充色。<br>“rowHeight”：行的高度。  </p>
+<h2 id="header">header</h2><p>superList中表格头部的样式属性。相关属性如下：  </p>
+<pre><code><span class="string">"header"</span>: {
+    <span class="string">"headerHeight"</span>: <span class="string">"42"</span>,
+    <span class="string">"backgroundColor"</span>: <span class="string">"#ebecf0"</span>,
+    <span class="string">"textStyle"</span>: {
+        ...
+    }
+}  
+</code></pre><p>“headerHeight”：表格头部的高度。<br>“backgroundColor”：表格头部的背景色。<br>“textStyle”：表格头部的文本样式。具体属性见<a href="/general_style/#textStyle">textStyle</a>  </p>
+<h2 id="column">column</h2><p>superList中各列的样式属性。相关属性如下：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"valueSource"</span>: <span class="string">""</span>,
+    <span class="string">"name"</span>: <span class="string">""</span>,
+    <span class="string">"padding"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"valueFormat"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"range"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"textStyle"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"alignment"</span>: <span class="string">"NXAlignmentCenter"</span>,
+    <span class="string">"showChart"</span>: <span class="literal">false</span>,
+    <span class="string">"showText"</span>: <span class="literal">true</span>,
+    <span class="string">"chartWidth"</span>: <span class="number">100</span>,
+    <span class="string">"chart"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"multiValueSource"</span>: <span class="collection">[]</span>
+}</span>  
+</code></pre><p>“valueSource”：该属性对主列有用，设置主列的数据来源。数据源为structure中granularity的key。<br>“name”：列的名称。<br>“padding”：列内单元格的内边距。<br>“valueFormat”：列内数据的格式化。详情见<a href="/series/#valueFormats">valueFormats</a><br>“range”：根据数据范围，将列内数据划分区域。详情见<a href="/series/#colorRange">colorRange</a><br>“textStyle”：列内单元格的文本样式。详情见<a href="/general_style/#textStyle">textStyle</a><br>“alignment”：列内单元格的排列对齐方式。可选项有：”NXAlignmentLeft”(靠左对齐),”NXAlignmentCenter”(水平居中对齐),”NXAlignmentRight”(靠右对齐),”NXAlignmentTop”(顶部对齐),”NXAlignmentMiddle”(垂直居中对齐),”NXAlignmentBottom”(底部对齐)<br>“showChart”：是否显示图表。<br>“showText”：是否显示文字。<br>“chartWidth”：图表的宽度。<br>“chart”：如果”showChart”为true，那么应该设置图表的样式。具体属性见：<a href="/NiuChart_chart_concept">chart</a><br>“multiValueSource”：该列要显示的图形粒度列表。属性可以为空，程序自动将主列作为作为图形粒度；设置为一个数据源时，表示图表为单系列；设置为多个数据源时，表示图表为多系列。注意，此时设置的属性应该与chart中设置的图形粒度一致。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/NXCubeCard_style/" itemprop="url">
+                  card类型为NXCubeCard时chart样式总览
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-12T13:34:14+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NXCubeCard_style/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NXCubeCard_style/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>先了解卡片的各个部分或概念。下面这张图片，描述了卡片中的主要概念：<br><img src="/img/card_line.png" alt="card_line">  </p>
+<pre><code><span class="string">"chart"</span>: {
+    <span class="string">"padding"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"header"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"type"</span>: <span class="string">"NXChart"</span>,
+
+    <span class="comment">// type = NXChart时，chart的样式。</span>
+    <span class="attribute">...</span>
+
+    <span class="comment">// type = NXSuperList时，chart的样式。</span>
+    <span class="attribute">...</span>
+}  
+</code></pre><p>“padding”和”header”属性同<a href="/NXCard_style">card类型不为NXCubeCard时chart的样式</a>  </p>
+<h2 id="type">type</h2><p>图表的类型分为两种：一.<a href="/NXChart_type_concept">NXChart</a>；二.<a href="/NXSuperList_type_concept">NXSuperList</a>。默认类型为NXChart。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/NXChart_type_concept/" itemprop="url">
+                  chart类型为NXChart的样式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-12T10:08:04+08:00" content="2016-01-12">
+              2016-01-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NXChart_type_concept/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NXChart_type_concept/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>当chartType设置为NXChartType.NXChart时，card使用如下样式：  </p>
+<pre><code><span class="collection">{
+    <span class="string">"chart"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"footer"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailTopPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailTotalPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailLeftPanel"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"annotation"</span>: <span class="collection">{
+        ...
+    }</span>,
+    <span class="string">"detailRightPanel"</span>: <span class="collection">{
+        ...
+    }</span>
+}</span>  
+</code></pre><h2 id="chart">chart</h2><p>chart配置的相关属性见<a href="/NiuChart_chart_concept">chart</a></p>
+<h2 id="footer">footer</h2><p>chart底部导航条的样式。相关属性如下：  </p>
+<pre><code><span class="string">"footer"</span>: {
+    <span class="string">"navigation"</span>: {
+        <span class="string">"visible"</span>: <span class="literal">true</span>,
+        <span class="string">"navigationType"</span>: <span class="string">"NXSliderTypeChart"</span>,
+        <span class="string">"orientation"</span>: <span class="string">"horizontal"</span>,
+        <span class="string">"minGapDistance"</span>: <span class="number">0</span>,
+        <span class="string">"maxGapDistance"</span>: <span class="number">0</span>,
+        <span class="string">"outRangeFill"</span>: {
+            <span class="string">"visible"</span>: <span class="literal">false</span>,
+            <span class="string">"fillColor"</span>: <span class="string">""</span>,
+            <span class="string">"fillAlpha"</span>: <span class="number">0.3</span>,
+            <span class="string">"cornerRadius"</span>: <span class="number">0</span>
+        },
+        <span class="string">"inRangeFill"</span>: {
+            <span class="string">"visible"</span>: <span class="literal">false</span>,
+            <span class="string">"fillColor"</span>: <span class="string">""</span>,
+            <span class="string">"fillAlpha"</span>: <span class="number">0.3</span>,
+            <span class="string">"cornerRadius"</span>: <span class="number">0</span>
+        },
+        <span class="string">"backgroundTrackFill"</span>: {
+            ...
+        },
+        <span class="string">"handleBarFill"</span>: {
+            ...
+        }
+    }
+    <span class="string">"length"</span>: <span class="number">40</span>
+}  
+</code></pre><p>“length”：当导航条是水平的时候，导航条的高度为length；当导航条是垂直的时候，导航条的宽度为length。</p>
+<h3 id="navigation">navigation</h3><p>chart底部导航条的样式。相关属性如下：  </p>
+<pre><code><span class="string">"navigation"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"navigationType"</span>: <span class="string">"NXSliderTypeChart"</span>,
+    <span class="string">"orientation"</span>: <span class="string">"horizontal"</span>,
+    <span class="string">"minGapDistance"</span>: <span class="number">0</span>,
+    <span class="string">"maxGapDistance"</span>: <span class="number">0</span>,
+    <span class="string">"outRangeFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"inRangeFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"backgroundTrackFill"</span>: {
+        <span class="attribute">...</span>
+    },
+    <span class="string">"handleBarFill"</span>: {
+        <span class="attribute">...</span>
+    }
+}  
+</code></pre><p>“visible”：表示底部导航条是否可见。<br>“navigationType”：底部导航条的类型。可选项有：”NXSliderTypeChart”(有缩略图),”NXSliderTypeLine”(中间只有一根线)<br>“orientation”：底部导航条的方向。可以是”horizontal”(水平),”vertical”(垂直)<br>“minGapDistance”：两端最小的间距。<br>“maxGapDistance”：两端最大的间距。<br>“outRangeFill”：当”navigationType”为”NXSliderTypeChart”时，未选中区域背景的填充。相关属性见<a href="#footerFillStyle">footerFillStyle</a><br>“inRangeFill”：当”navigationType”为”NXSliderTypeChart”时，已选中区域背景的填充。相关属性见<a href="#footerFillStyle">footerFillStyle</a><br>“backgroundTrackFill”：当”navigationType”为”NXSliderTypeLine”时，垂直居中背景线的风格。相关属性见<a href="/general_style/#fillColor">fillColor</a><br>“handleBarFill”：当”navigationType”为”NXSliderTypeLine”时，拖动条的填充色。相关属性见<a href="/general_style/#fillColor">fillColor</a>  </p>
+<h2 id="footerFillStyle"><a href="id:footerFillStyle" target="_blank" rel="external">footerFillStyle</a></h2><p>chart底部导航条区域背景的填充。相关属性如下：  </p>
+<pre><code>{
+    "<span class="attribute">visible</span>": <span class="value"><span class="literal">false</span></span>,
+    "<span class="attribute">fillColor</span>": <span class="value"><span class="string">""</span></span>,
+    "<span class="attribute">fillAlpha</span>": <span class="value"><span class="number">0.3</span></span>,
+    "<span class="attribute">cornerRadius</span>": <span class="value"><span class="number">0</span>
+</span>}  
+</code></pre><p>“visible”：该区域背景是否可见。<br>“fillColor”：该区域背景的填充色。<br>“fillAlpha”：该区域背景的透明度。<br>“cornerRadius”：该区域背景框角的孤度。  </p>
+<h2 id="detailTopPanel"><a href="id:detailTopPanel" target="_blank" rel="external">detailTopPanel</a></h2><p>顶部的数据详情面板。该面板为通用面板，即所有类型的图表都可以通过json文件配置得到。相关属性如下：<br><img src="/img/detailTopPanel.png" alt="detailTopPanel">  </p>
+<pre><code><span class="string">"detailTopPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"type"</span>: <span class="string">"NXDetailNormal"</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"percentInTotalVisible"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“visible”：设置该面板是否显示。<br>“type”：设置该面板的显示类型。具体属性见<a href="#detailPanelType">detailPanelType</a><br>“isAlwaysVisible”：设置该面板是否一直可见。若是的话，位下title下面；若不是的话，覆盖在title上。<br>“percentInTotalVisible”：设置该面板的数值在总数中的百分比是否显示。  </p>
+<h2 id="detailTotalPanel">detailTotalPanel</h2><p>额外的数据详情总数面板。该面板默认图表是饼图时才显示。相关属性如下：<br><img src="/img/detailTotalPanel.png" alt="detailTotalPanel">  </p>
+<pre><code><span class="string">"detailTotalPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAboveDetailTop"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“visible”：设置该面板是否显示。<br>“isAboveDetailTop”：设置该面板是否显示在<a href="#detailTopPanel">detailTopPanel</a>的上面。</p>
+<h2 id="detailLeftPanel">detailLeftPanel</h2><p>左侧的数据详细面版。该面板默认在pad端且图表是泡泡图时才显示。相关属性如下：<br><img src="/img/detailLeftPanel.png" alt="detailLeftPanel">  </p>
+<pre><code><span class="string">"detailLeftPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">true</span>,
+    <span class="string">"type"</span>: <span class="string">"NXDetailMultiMeasureVertical"</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">true</span>,
+    <span class="string">"percentInTotalVisible"</span>: <span class="literal">false</span>
+}  
+</code></pre><p>“<a href="id:visible" target="_blank" rel="external">visible</a>“：设置该面板是否显示。如果该面板显示，那么该面板会自动将”<a href="#isAlwaysVisible">isAlwaysVisible</a>“设置为false;并且双指时显示配合左详细面板的比较器，见<a href="id:detailTopCooperateLeftCompare" target="_blank" rel="external">NXDetailTopCooperateLeftCompare</a>。<br>“type”：设置该面板的显示类型。具体属性见<a href="#detailPanelType">detailPanelType</a><br>“<a href="id:isAlwaysVisible" target="_blank" rel="external">isAlwaysVisible</a>“：设置该面板是否一直可见。若是的话，位下title下面；若不是的话，覆盖在title上。当<a href="#visible">visible</a>为true时，该属性无效。<br>“percentInTotalVisible”：设置该面板的数值在总数中的百分比是否显示。  </p>
+<h2 id="annotation">annotation</h2><p>当图表中存在多个series时，可以通过annotation来筛选显示需要的series。当图表是泡泡图的时候，默认显示annotation。相关属性如下：<br><img src="/img/annotation.png" alt="annotation">  </p>
+<pre><code><span class="string">"annotation"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"horizontal"</span>: <span class="literal">false</span>,
+    <span class="string">"width"</span>: <span class="number">170</span>,
+    <span class="string">"itemHeight"</span>: <span class="number">40</span>,
+    <span class="string">"decorationMarginLeft"</span>: <span class="number">1</span>,
+    <span class="string">"titleMarginLeft"</span>: <span class="number">20</span>,
+    <span class="string">"titleStyle"</span>: {
+        ...
+    },
+    <span class="string">"symbolStyle"</span>: {
+        ...
+    }
+}  
+</code></pre><p>“visible”：设置annotaion是否显示。<br>“isAlwaysVisible”：设置是否一直显示。<br>“horizontal”：设置是水平显示series列表还是垂直显示。<br>“width”：宽度。<br>“itemHeight”：条目的高度。<br>“decorationMarginLeft”：左侧的checkBox距离左侧的margin值。<br>“titleMarginLeft”：title标签距离左侧的margin值。<br>“titleStyle”：title标签的文本样式。具体属性见<a href="/general_style/#textStyle">textStyle</a><br>“symbolStyle”：checkBox的样式。具体属性见<a href="/general_style/#symbol">symbol</a></p>
+<h2 id="detailRightPanel">detailRightPanel</h2><p>右侧的图形粒度数据点呈现列表。只有饼图和地图才有该面板。相关属性如下：<br><img src="/img/detailRightPanel.png" alt="detailRightPanel">  </p>
+<pre><code><span class="string">"detailRightPanel"</span>: {
+    <span class="string">"visible"</span>: <span class="literal">false</span>,
+    <span class="string">"isAlwaysVisible"</span>: <span class="literal">false</span>,
+    <span class="string">"maxWidth"</span>: <span class="number">0</span>,
+    <span class="string">"measureValueHeight"</span>: <span class="number">35</span>,
+    <span class="string">"measurePercentHeight"</span>: <span class="number">20</span>,
+    <span class="string">"textColor"</span>: <span class="string">"#dcdde0"</span>,
+    <span class="string">"smallTitleValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"bigTitleValueSource"</span>: <span class="string">""</span>,
+    <span class="string">"isSmallTitlePercent"</span>: <span class="literal">true</span>,
+    <span class="string">"smallTitlePercentFormatString"</span>: <span class="string">"#,#%"</span>
+}  
+</code></pre><p>“visible”：设置该面板是否可见。<br>“isAlwaysVisible”：设置该面板是否一直可见。<br>“maxWidth”：行的最大宽度，当最大限制是0时表示无限制。<br>“measureValueHeight”：显示数据值的控件的高度。<br>“measurePercentHeight”：显示数据值百分比的控件的高度。<br>“textColor”：文本的常态颜色。<br>“smallTitleValueSource”：小标题的数据源。<br>“bigTitleValueSource”：大标题的数据源。<br>“isSmallTitlePercent”：是否小标题显示百分比。<br>“smallTitlePercentFormatString”：小标题百分比的格式化。  </p>
+<h2 id="detailPanelType"><a href="id:detailPanelType" target="_blank" rel="external">detailPanelType</a></h2><p>详细面板的类型。可选项有：  </p>
+<ul>
+<li>常态。”NXDetailNormal”,”NXDetailNormalCompare”  </li>
+<li>目标值与实际值对比。”NXDetailNormalTargetReal”  </li>
+<li>常态大字体版本。”NXDetailBigValueNormal”,”NXDetailBigValueNormalCompare”  </li>
+<li>竖直多度量，用于气泡图。”NXDetailMultiMeasureVertical”,”NXDetailMultiMeasureVerticalCompare”  </li>
+<li>竖直多度量，用于气泡图，2行版本。”NXDetailMultiMeasureHorizontal”,”NXDetailMultiMeasureHorizontalCompare”  </li>
+<li>横向多度量，用于气泡图。”NXDetailMultiMeasureGrid”,”NXDetailMultiMeasureGridCompare”  </li>
+<li><a href="id:detailTopCooperateLeftCompare" target="_blank" rel="external">NXDetailTopCooperateLeftCompare</a>：与左侧详细面板组合用的上边比较器。具体概念见图：<br>  <img src="/img/detailTopCooperateLeftCompare.png" alt="detailTopCooperateLeftCompare"></li>
+<li>NXDetailVertical：phone端竖直的。  </li>
+</ul>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/NiuChart-logo视觉规范/" itemprop="url">
+                  NiuChart logo视觉规范
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-06T17:23:52+08:00" content="2016-01-06">
+              2016-01-06
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/NiuChart-logo视觉规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="NiuChart-logo视觉规范/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h4 id="形式">形式</h4><p>NiuChart logo为图形+文字的组合形式呈现，具体设计思路请查看<a href="http://blog.niuchart.com/niuchart-logozai-she-ji/" target="_blank" rel="external">NiuChart logo 再设计</a><br><img src="/img/n_logo.png" alt="n\_logo">^logo以单图形出现时的亮底、暗底形式<br>单图形适合运用的场景比较多，类似头像、icon、品牌logo、周边等</p>
+<p><img src="/img/n_logo2.png" alt="n\_logo2">^两种组合形式；<br>左为上下排布组合；此组合形式适合出现在内容以左对齐的场景下<br>右为水平组合；此形式适合居中场景（所以内容居中时，也常单图形的形式出现）</p>
+<h4 id="配色">配色</h4><p><img src="/img/n_color.png" alt="n\_color"><br>^c（此字符为编者命名，下同）为品牌主色；右侧四色为辅助色彩</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
 
   </section>
 
@@ -371,7 +2072,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

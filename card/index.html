@@ -81,7 +81,7 @@
     &quot;id&quot;: &quot;&quot;,
     &quot;cardTitle&quot;: &quot;&quot;,
     &quot;size&quot;: &quot;row-xs">
-<meta property="og:updated_time" content="2016-01-18T07:13:49.000Z">
+<meta property="og:updated_time" content="2016-01-18T09:28:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="card">
 <meta name="twitter:description" content="card的属性节点如下：  
@@ -280,11 +280,11 @@
     // 不是cube时，初始化时一进来就是小卡片状态
     <span class="string">"initSmallCardMode"</span>: <span class="literal">false</span>
 }</span>  
-</code></pre><p>“dataSetId”：card拥有的数据库对应于report中metaStructure的key。<br>“dataStructure”：card拥有的数据库的structure。与report中具有相同dataSetId的metaStructure对应的是同一个数据库。<br>“subCards”：如果card包含有子card，那么card将表示为容器。子card的相关属性节点同card<br>“type”：card的类型。可选项有：＂NXCubeCard＂，＂NXImageCard＂，＂NXTextCard＂，＂NXBlankCard＂，＂NXContainerCard＂。　　</p>
+</code></pre><p>“dataSetId”：card拥有的数据库对应于report中metaStructure的key。<br>“dataStructure”：card拥有的数据库的structure。与report中具有相同dataSetId的metaStructure对应的是同一个数据库。详情见<a href="/structure">structure</a><br>“subCards”：如果card包含有子card，那么card将表示为容器。子card的相关属性节点同card<br>“type”：card的类型。可选项有：＂NXCubeCard＂，＂NXImageCard＂，＂NXTextCard＂，＂NXBlankCard＂，＂NXContainerCard＂。　　</p>
 <ul>
 <li>如果type为＂NXCubeCard＂时，需要给card配置”<a href="#NXCubeCard_style">style</a>“和”linkEvent”属性。  </li>
 <li>如果type不是＂NXCubeCard＂时，需要给card配置<a href="#NXCard_style">chartStyle</a>。  </li>
-<li>如果type为＂NXContainerCard＂时，需要给card配置”initSmallCardMode”属性。”initSmallCardMode”表示card是否以小卡片模式显示。当card以小卡片模式显示时，只显示标题、条件、顶部的详细面板。<br>“id”：card的唯一标识码。<br>“cardTitle”：card的标题。<br>“size”：card在不同尺寸设备上显示的大小。详情见<a href="#differentSizeAdapter">不同屏幕尺寸的适配</a><br>“linkEvent”：卡片是否当作联动事件源，有哪些观察者等配置信息。如果card的type设置为NXCubeCard，需要设置linkEvent属性  <h2 id="不同屏幕尺寸的适配"><a href="id:differentSizeAdapter" target="_blank" rel="external">不同屏幕尺寸的适配</a></h2>NiuChart内置了一套响应式栅格系统排版系统，随着外层视图的尺寸变化产生相应的排版，可将同一报表适应于平板电脑及手机。默认将横向分割成12列，竖向也分割成12列。根据屏幕分别将长宽分成4类：超小-xs，小-sm，中等-md，大-lg。栅格设置在父容器宽度大于或等于阈值的时候起作用，并且将小的长宽设置覆盖掉。因此，对任何一个元素应用任何.col-md- 将不仅作用于中等尺寸的屏幕，还将作用于大屏幕设备（如果没有设置.col-lg-的话）<br>可用以下设置宽度：col-xs-<em>, col-sm-</em>, col-md-<em>, col-lg-</em>. 星号为[0,numberOfColumns]到间的整数。例如将宽度设置成”col-md-4 col-sm-6”表示父容器宽度在md范围情况下占父容器的三分之一，父容器宽度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。<br>可用以下设置高度：row-xs-<em>, row-sm-</em>, row-md-<em>, row-lg-</em>. 星号为[0,numberOfRows]到间的整数。例如将高度设置成”row-md-4 row-sm-6”表示父容器高度在md范围情况下占父容器的三分之一，父容器高度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。  </li>
+<li>如果type为＂NXContainerCard＂时，需要给card配置”initSmallCardMode”属性。”initSmallCardMode”表示card是否以小卡片模式显示。当card以小卡片模式显示时，只显示标题、条件、顶部的详细面板。<br>“id”：card的唯一标识码。<br>“cardTitle”：card的标题。<br>“size”：card在不同尺寸设备上显示的大小。详情见<a href="#differentSizeAdapter">不同屏幕尺寸的适配</a><br>“linkEvent”：卡片是否当作联动事件源，有哪些观察者等配置信息。如果card的type设置为NXCubeCard，需要设置linkEvent属性  <h2 id="不同屏幕尺寸的适配"><a href="id:differentSizeAdapter" target="_blank" rel="external">不同屏幕尺寸的适配</a></h2>NiuChart内置了一套响应式栅格系统排版系统，随着外层视图的尺寸变化产生相应的排版，可将同一报表适应于平板电脑及手机。默认将横向分割成12列，竖向也分割成12列。根据屏幕分别将长宽分成4类：超小-xs，小-sm，中等-md，大-lg。栅格设置在父容器宽度大于或等于阈值的时候起作用，并且将小的长宽设置覆盖掉。因此，对任何一个元素应用任何.col-md- 将不仅作用于中等尺寸的屏幕，还将作用于大屏幕设备（如果没有设置.col-lg-的话）<br>可用以下设置宽度：col-xs-<em>, col-sm-</em>, col-md-<em>, col-lg-</em>. 星号为[0,numberOfColumns]到间的整数。例如将宽度设置成”col-md-4 col-sm-6”表示父容器宽度在md范围情况下占父容器的三分之一，父容器宽度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。<br>可用以下设置高度：row-xs-<em>, row-sm-</em>, row-md-<em>, row-lg-</em>. 星号为[0,numberOfRows]到间的整数。例如将高度设置成”row-md-4 row-sm-6”表示父容器高度在md范围情况下占父容器的三分之一，父容器高度在sm范围情况下占父容器的二分之一，以此设置适应各种大小的屏幕。</li>
 </ul>
 </span>
       
@@ -379,7 +379,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
